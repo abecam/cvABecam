@@ -6,8 +6,7 @@ let height = 1080;
 let endColor;
 let toColor;
 let houses;
-//const jsonPath = "cvAlain.json";
-const jsonPath = "creationix.json"; // Block on key
+const jsonPath = "cvAlain.json";
 let jsonObject;
 
 let rootElement;
