@@ -51,37 +51,55 @@ function renderInHtmlNoFiltering(rootElement) {
 
 	currentDepth = 0;
 
-	renderOnePartOfHtml(rootElement, currentDepth);
+	renderOnePartOfHtml(rootElement, currentDepth, divForHtml);
 }
 
-function renderOnePartOfHtml(currentElement, currentDepth) {
-	//console.log("Depth " + currentDepth);
+function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
+	const current_element_txt = `${replaceFirstDigitByName(currentElement.key)}${currentDepth}${currentElement.nbInParsing}`;
+	const id_current_element = current_element_txt.replace(/\s+/g, '');
+
 	for (let iElements = 0; iElements < currentElement.elements.length; iElements++) {
 		child = currentElement.elements[iElements];
+
+		const child_element_txt = `${replaceFirstDigitByName(child.key)}${currentDepth}${child.nbInParsing}`;
+		const id_child_element = child_element_txt.replace(/\s+/g, '');
 
 		//console.log("element " + child.content);
 		if (child.nbOfElements() + child.nbOfChildren() == 0) {
 			// A leaf :)
-			divForHtml.html(child.content + "<br/>", true);
+			usedDiv.html(`${child.content}<br/>`, true);
 		}
 		else {
-			divForHtml.html("<div class=\"rendered-child-level" + currentDepth + "\"><p>", true);
-			renderOnePartOfHtml(child, currentDepth + 1)
-			divForHtml.html("</p></div>", true);
+			// Button, then content
+			if (child.key != "no_key")	{
+				usedDiv.html(`<div class=\"${id_current_element}_rendered_subtabs\" id=\"${id_child_element}_rendered_subtabheader\"><p>${child.key}</p></div>`, true)
+			}
+			usedDiv.html(`<div class=\"${id_current_element}_rendered_subtabcontent\" id=\"${id_child_element}_rendered_subtabcontent\"><p>\n</p></div>`, true);
+			const divForContent = select(`#${id_child_element}_rendered_subtabcontent`, usedDiv);
+			divForContent.parent(usedDiv);
+			renderOnePartOfHtml(child, currentDepth + 1, divForContent);
 		}
 	}
 	for (let iElements = 0; iElements < currentElement.children.length; iElements++) {
 		child = currentElement.children[iElements];
 
+		const child_element_txt = `${replaceFirstDigitByName(child.key)}${currentDepth}${child.nbInParsing}`;
+		const id_child_element = child_element_txt.replace(/\s+/g, '');
+
+		let isButton = false; // If it is a button and it is the first one, we click on it by default.
 		//console.log("children " + child.content);
 		if (child.nbOfElements() + child.nbOfChildren() == 0) {
 			// A leaf :)
-			divForHtml.html(child.content + "<br/>", true);
+			usedDiv.html(`${child.content}<br/>`, true);
 		}
 		else {
-			divForHtml.html("<div class=\"rendered-element-level" + currentDepth + "\"><p>", true);
-			renderOnePartOfHtml(child, currentDepth + 1)
-			divForHtml.html("</p></div>", true);
+			if (child.key != "no_key") {
+				usedDiv.html(`<div class=\"${id_current_element}_rendered_subtabs\" id=\"${id_child_element}_rendered_subtabheader\"><p>${child.key}</p></div>`, true)
+			}
+			usedDiv.html(`<div class=\"${id_current_element}_rendered_subtabcontent\" id=\"${id_child_element}_rendered_subtabcontent\"><p>\n</p></div>`, true);
+			const divForContent = select(`#${id_child_element}_rendered_subtabcontent`, usedDiv);
+			divForContent.parent(usedDiv);
+			renderOnePartOfHtml(child, currentDepth + 1, divForContent);
 		}
 	}
 }
@@ -346,7 +364,8 @@ function distributeObjectsOnPlane(element, xSize, ySize, fromX, fromY) {
 	const gridSizeY = Math.ceil(Math.sqrt(numObjects/ratio)); // Grid size is the square root of number of objects rounded up
 	const gridSizeX = Math.ceil(numObjects/gridSizeY)
 
-	console.log(numObjects+" distributed on "+gridSizeX +", "+gridSizeY);
+	//console.log(numObjects+" distributed on "+gridSizeX +", "+gridSizeY);
+
 	const cellWidth = xSize / gridSizeX;
 	const cellHeight = ySize / gridSizeY;
 
@@ -417,7 +436,7 @@ function distributeObjectsOnPlane(element, xSize, ySize, fromX, fromY) {
 		const xPos = fromX + col * cellWidth;
 		const yPos = fromY + row * cellHeight;
 
-		console.log(i+" on "+row +", "+col);
+		//console.log(i+" on "+row +", "+col);
 
 		//console.log(`Object: ${obj.key}: ${obj.value}`);
 		//console.log(" From " + fromX + " , " + fromY + " : " + col + " , " + row + " : " + i);
@@ -530,8 +549,6 @@ function drawVoronoi(sites) {
 		while (nEdges--) {
 
 			edge = edges[nEdges];
-
-			print(edge.va + " , " + edge.vb);
 
 			line(edge.va.x, edge.va.y, edge.vb.x, edge.vb.y);
 		}
