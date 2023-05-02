@@ -2,72 +2,60 @@
 	"Personal Informations": {
 		"fullName": "Dr. Alain Becam",
 		"homeAddress": {
-			"description": "Address",
-			"content": "Available upon request"
+			"content": "Address available upon request"
 		},
-		"Phone Numbers": "Available upon request",
+		"Phone Numbers": {
+			"content": "Phone Numbers available upon request"
+		},
 		"email Addresses": [
 			"contact@thegiantball.com"
 		],
-		"linkedIn": "www.linkedin.com/in/abecam/",
-		"github": "https://github.com/abecam",
+		"others": {
+			"linkedIn": "<a href=\"https://www.linkedin.com/in/abecam/\" target=”_blank” >LinkedIn Profile</a>",
+			"github": "<a href=\"https://github.com/abecam\" target=”_blank” >GitHub repository</a>"
+		},
 		"webPages": [
-			"www.thegiantball.com/",
-			"ethical-game.org",
-			"thefilter.shop"
+			"<a href=\"https://www.thegiantball.com/\" target=”_blank” >TheGiantBall Blog</a>, desciption of various projects and some privacy policies (mostly) for the Android Games.",
+			"<a href=\"https://www.ethical-game.org/\" target=”_blank” >Ethical Game</a>, instructions for parents and developers about ethical and non-ethical practices in video games",
+			"<a href=\"https://thefilter.shop/\" target=”_blank” >The Filter Shop</a>, a work-in-progress place to filter out non-ethical products and push ethical products to the front."
 		]
 	},
 	"Education": {
-		"Cursus": [
-			{
-				"filterValues":{
-					"from Year": "1998",
-					"to Year": "2002"
-				},
+		"Cursus": {
+			"1998 -2002" : {
+
 				"Institution": "Insa de Lyon",
 				"City": "Villeurbanne",
 				"Country": "France",
 				"Diploma": "PhD in Computer Science"
 			},
-			{
-				"filterValues":{
-					"from Year": "1995",
-					"to Year": "1998"
-				},
+			"1995 -1998" : {
 				"Institution": "Université de Bourgogne",
 				"City": "Dijon",
 				"Country": "France",
 				"Diploma": "MSc in Computer Sciences for the images"
 			},
-			{
-				"filterValues":{
-					"from Year": "1993",
-					"to Year": "1995"
-				},
+			"1993 -1995" : {
 				"Institution": "IUT Informatique de Dijon",
 				"City": "Dijon",
 				"Country": "France",
 				"Diploma": "Two-year technical University Degree in computer sciences (DUT)"
 			}
-		],
-		"Languages": [
-			{
-				"language": "English",
+	},
+		"Languages": {
+			"English": {
 				"level": "fluent"
 			},
-			{
-				"language": "French",
+			"French": {
 				"level": "mother tongue"
 			},
-			{
-				"language": "German",
+			"German": {
 				"level": "advanced beginner"
 			},
-			{
-				"language": "Romanian",
+			"Romanian": {
 				"level": "beginner"
 			}
-		]
+		}
 	},
 	"Main Skills": {
 		"Domain": "Computer Sciences",
@@ -138,11 +126,11 @@
 			]
 		}
 	],
-	"Work Experience": [
-		{
+	"Work Experience": {
+		"Jan 2021 - Feb 2023" : {
 			"filterValues":{
 				"from Year": "2021",
-				"to Year": "2021",
+				"to Year": "2023",
 				"from Month": "Jan",
 				"to Month": "Feb"
 			},
@@ -153,16 +141,16 @@
 			"Work accomplished": {
 				"Main task" : "Software engineer/System administrator for the LiSyM Cancer project and HITS publications and Seek repositories",
 				"Details": [
-					"co-development in Ruby on Rails of Seek, a data management application mostly intended for Life Sciences (https://github.com/seek4science/seek), including improving the OpenBis connector, Ruby&Java (https://github.com/FAIRdom/openseek-api-gem & https://github.com/FAIRdom/openseek-api)",
-					"installation and administration of NextCloud, OpenBis, Authentik, Omero, administration of LiSyM Seek (https://seek.lisym.org/) and co-administration of several other web applications using Docker and Docker-Compose, Linux Ubuntu Server. Full set-up of central identity, including the choice of Authentik, between Authentik and the other servers, through LDAP and OpenID.",
+					"co-development in Ruby on Rails of Seek, a data management application mostly intended for Life Sciences (<a href=\"https://github.com/seek4science/seek\" target=”_blank” >Seek4Science</a>), including improving the OpenBis connector, Ruby&Java (<a href=\"https://github.com/FAIRdom/openseek-api-gem\" target=”_blank” >OpenSeek API Gem</a> & <a href=\"https://github.com/FAIRdom/openseek-api\" target=”_blank” >OpenSeek API</a>)",
+					"installation and administration of NextCloud, OpenBis, Authentik, Omero, administration of LiSyM Seek (<a href=\"https://seek.lisym.org/\" target=”_blank” >LiSyM Seek</a>) and co-administration of several other web applications using Docker and Docker-Compose, Linux Ubuntu Server. Full set-up of central identity, including the choice of Authentik, between Authentik and the other servers, through LDAP and OpenID.",
 					"Trainings and presentations around Seek and NextCloud: using the API, using the OpenBis connector.",
 					"Other development for Seek and various utilities scripts in Python and Ruby."
 				]
 			}
 		},
-		{
+		"Sept 2019 - Dec 2021" : {
 			"filterValues":{
-				"from Year": "2021",
+				"from Year": "2019",
 				"to Year": "2021",
 				"from Month": "Sept",
 				"to Month": "Dec"
@@ -174,13 +162,13 @@
 			"Work accomplished": {
 				"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
 				"Details": [
-					"One is self-published on Steam: https://store.steampowered.com/app/1378660/NYAF/ - and Android, the 3 others were published on Android: https://play.google.com/store/apps/developer?id=Alain+Becam.",
-					"Improvements of my former Applets games and of a names generator started in 2017, publishing on Itch.io: https://tgbb.itch.io/ , and all sources available on BitBucket: https://bitbucket.org/abecam/.",
+					"One is self-published on Steam: <a href=\"https://store.steampowered.com/app/1378660/NYAF/\" target=”_blank”>NYAF</a> - and Android, the 3 others were published on <a href=\"https://play.google.com/store/apps/developer?id=Alain+Becam\" target=”_blank” >Android</a>.",
+					"Improvements of my former Applets games and of a names generator started in 2017, published on <a href=\"https://tgbb.itch.io/\" target=”_blank” >Itch.io</a>, and all sources available on <a href=\"https://bitbucket.org/abecam/\" target=”_blank” >BitBucket</a>.",
 					"Started the development of a new monitoring service in Java to monitor Production environments, with the option of using metadata for finding anomalies. "
 				]
 			}
 		},
-		{
+		"Mar 2010 - Sept 2019" : {
 			"filterValues":{
 				"from Year": "2010",
 				"to Year": "2019",
@@ -230,7 +218,7 @@
 				]
 			}
 		},
-		{
+		"Sept 2008 - Feb 2010" : {
 			"filterValues":{
 				"from Year": "2008",
 				"to Year": "2010",
@@ -271,7 +259,7 @@
 				]
 			}
 		},
-		{
+		"From 2006" : {
 			"filterValues":{
 				"from Year": "2006"
 			},
@@ -280,16 +268,16 @@
 			"Work accomplished": {
 				"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
 				"Details": [
-					"Development of several prototypes as proof-of-concept for convincing a Sport Watch company to add maps support on their watches. The most useful prototype is available on GitHub: https://github.com/abecam/MapsForAll.\nThe project proposal got me a discussion with the product manager of the company but collaborating would only have been possible with a relocation to their country, which was not possible.\nThis prototype development learnt me how to develop on a Garmin watch and I developed several other applications and watchface, one being released: https://apps.garmin.com/en-US/apps/3fdc7678-2892-4214-9c9d-97f37fe64a15",
+					"Development of several prototypes as proof-of-concept for convincing a Sport Watch company to add maps support on their watches. The most useful prototype is available on GitHub: <a href=\"https://github.com/abecam/MapsForAll\" target=”_blank” >MapsForAll</a>.\nThe project proposal got me a discussion with the product manager of the company but collaborating would only have been possible with a relocation to their country, which was not possible.\nThis prototype development learnt me how to develop on a Garmin watch and I developed several other applications and watchface, one being released: https://apps.garmin.com/en-US/apps/3fdc7678-2892-4214-9c9d-97f37fe64a15",
 					"Development of various small applications for Android in stereoscopic 3D, using the Rajawali 3D API,  then a board game released only as a demo in C# with Unity3D.",
 					"Conception and development of a 2D game engine in Java used in 2 games played by more than 6000 persons online.",
-					"Android Developer Challenge: full conception of a geolocalised game, the Treasures Chests, and using web-services for building personnalised hunts.",
-					"Conception and development of various Applet games, including a multiplayer social experiment using a dedicated server using TCP connection and using the IP address to find the player country using IP ranges for countries (more details here: http://www.thegiantball.com/2020/07/the-giant-ball.html). Together played by around 100.000 persons from 83 countries.",
+					"Android Developer Challenge: full conception of a geolocalised game, the Treasures Chests, and using web-services writen with CakePHP using MySQL for building personnalised hunts. See the explanation here: <a href=\"https://www.youtube.com/watch?v=MLYwwj6ZUd4\" target=”_blank” >The Treasure Chests explanation</a>",
+					"Conception and development of various Applet games, including a multiplayer social experiment using a dedicated server using TCP connection and using the IP address to find the player country using IP ranges for countries (more details here: <a href=\"http://www.thegiantball.com/2020/07/the-giant-ball.html\" target=”_blank” >An history of the giant ball</a>). Together played by around 100.000 persons from 83 countries.",
 					"Conception and development of a physic based 3D game, in C++ using Ogre3D and the Newton physics API. Modified it to a tutorial example, with the addition of multiplayer using TCP."
 				]
 			}
 		},
-		{
+		"Sept 2004 - Feb 2008" : {
 			"filterValues":{
 				"from Year": "2004",
 				"to Year": "2008",
@@ -343,7 +331,7 @@
 				]
 			}
 		},
-		{
+		"2003 - 2004" : {
 			"filterValues":{
 				"from Year": "2003",
 				"to Year": "2004"
@@ -356,7 +344,7 @@
 				"Main task" : "In an attempt to start a new company, worked with an associate on different applications, mostly C++ using DirectX and DirectShow. A fully working prototype has been developed involving computer vision (C++ and DDK)."
 			}
 		},
-		{
+		"2001 - 2003" : {
 			"filterValues":{
 				"from Year": "2001",
 				"to Year": "2003"
@@ -374,7 +362,7 @@
 				]
 			}
 		},
-		{
+		"1998 - 2001" : {
 			"filterValues":{
 				"from Year": "1998",
 				"to Year": "2001"
@@ -391,5 +379,5 @@
 				]
 			}
 		}
-	]
+	}
 }
