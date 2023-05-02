@@ -1,7 +1,7 @@
 {
 	"Personal Informations": {
-		"fullName": "Dr. Alain Becam",
-		"homeAddress": {
+		"Full Name": "Dr. Alain Becam",
+		"Home Address": {
 			"content": "Address available upon request"
 		},
 		"Phone Numbers": {
@@ -14,7 +14,7 @@
 			"linkedIn": "<a href=\"https://www.linkedin.com/in/abecam/\" target=”_blank” >LinkedIn Profile</a>",
 			"github": "<a href=\"https://github.com/abecam\" target=”_blank” >GitHub repository</a>"
 		},
-		"webPages": [
+		"Web Pages": [
 			"<a href=\"https://www.thegiantball.com/\" target=”_blank” >TheGiantBall Blog</a>, description of various projects and some privacy policies (mostly) for the Android Games.",
 			"<a href=\"https://www.ethical-game.org/\" target=”_blank” >Ethical Game</a>, instructions for parents and developers about ethical and non-ethical practices in video games",
 			"<a href=\"https://thefilter.shop/\" target=”_blank” >The Filter Shop</a>, a work-in-progress place to filter out non-ethical products and push ethical products to the front."
@@ -205,9 +205,6 @@
 			}
 		},
 		"From 2006" : {
-			"filterValues":{
-				"from Year": "2006"
-			},
 			"Company": "www.TheGiantBall.com",
 			"Title": "Independent developer",
 			"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
@@ -248,10 +245,6 @@
 			}
 		},
 		"2003 - 2004" : {
-			"filterValues":{
-				"from Year": "2003",
-				"to Year": "2004"
-			},
 			"Company": "Independent",
 			"Title": "Research & Development",
 			"City": "Villeurbanne",
@@ -259,10 +252,6 @@
 			"Main task" : "In an attempt to start a new company, worked with an associate on different applications, mostly C++ using DirectX and DirectShow. A fully working prototype has been developed involving computer vision (C++ and DDK)."
 		},
 		"2001 - 2003" : {
-			"filterValues":{
-				"from Year": "2001",
-				"to Year": "2003"
-			},
 			"Company": "INSA de Lyon",
 			"City": "Villeurbanne",
 			"Country": "France",
@@ -275,10 +264,6 @@
 			]
 		},
 		"1998 - 2001" : {
-			"filterValues":{
-				"from Year": "1998",
-				"to Year": "2001"
-			},
 			"Company": "Université Lyon 1 and 2, INSA de Lyon",
 			"City": "Villeurbanne & Bourg en Bresse",
 			"Country": "France",

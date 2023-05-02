@@ -76,3 +76,88 @@ canvas {
   border: 1px solid #ccc;
   border-top: none;
 } 
+
+.rendered_subtabs_0 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.rendered_subtabs_1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.rendered_subtabs_2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.rendered_subtabs_3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 40px;
+}
+
+.rendered_subtabs_4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 50px;
+}
+
+.rendered_subtabs_5 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 60px;
+}
+
+.rendered_subtabs_6 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 70px;
+}
+
+.rendered_subtabcontent_0 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.rendered_subtabcontent_1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 25px;
+}
+
+.rendered_subtabcontent_2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 35px;
+}
+
+.rendered_subtabcontent_3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 45px;
+}
+
+.rendered_subtabcontent_4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 55px;
+}
+
+.rendered_subtabcontent_5 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 65px;
+}
+
+.rendered_subtabcontent_6 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  margin-left: 75px;
+}

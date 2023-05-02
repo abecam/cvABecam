@@ -55,9 +55,6 @@ function renderInHtmlNoFiltering(rootElement) {
 }
 
 function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
-	const current_element_txt = `${replaceFirstDigitByName(currentElement.key)}${currentDepth}${currentElement.nbInParsing}`;
-	const id_current_element = current_element_txt.replace(/\s+/g, '');
-
 	for (let iElements = 0; iElements < currentElement.elements.length; iElements++) {
 		child = currentElement.elements[iElements];
 
@@ -72,9 +69,9 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 		else {
 			// Button, then content
 			if (child.key != "no_key")	{
-				usedDiv.html(`<div class=\"${id_current_element}_rendered_subtabs\" id=\"${id_child_element}_rendered_subtabheader\"><p>${child.key}</p></div>`, true)
+				usedDiv.html(`<div class=\"rendered_subtabs_${currentDepth}\" id=\"${id_child_element}_rendered_subtabheader\"><p>${child.key}</p></div>`, true)
 			}
-			usedDiv.html(`<div class=\"${id_current_element}_rendered_subtabcontent\" id=\"${id_child_element}_rendered_subtabcontent\"><p>\n</p></div>`, true);
+			usedDiv.html(`<div class=\"rendered_subtabcontent_${currentDepth}\" id=\"${id_child_element}_rendered_subtabcontent\">\n</div>`, true);
 			const divForContent = select(`#${id_child_element}_rendered_subtabcontent`, usedDiv);
 			divForContent.parent(usedDiv);
 			renderOnePartOfHtml(child, currentDepth + 1, divForContent);
@@ -94,9 +91,9 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 		}
 		else {
 			if (child.key != "no_key") {
-				usedDiv.html(`<div class=\"${id_current_element}_rendered_subtabs\" id=\"${id_child_element}_rendered_subtabheader\"><p>${child.key}</p></div>`, true)
+				usedDiv.html(`<div class=\"rendered_subtabs_${currentDepth}\" id=\"${id_child_element}_rendered_subtabheader\"><p>${child.key}</p></div>`, true)
 			}
-			usedDiv.html(`<div class=\"${id_current_element}_rendered_subtabcontent\" id=\"${id_child_element}_rendered_subtabcontent\"><p>\n</p></div>`, true);
+			usedDiv.html(`<div class=\"rendered_subtabcontent_${currentDepth}\" id=\"${id_child_element}_rendered_subtabcontent\">\n</div>`, true);
 			const divForContent = select(`#${id_child_element}_rendered_subtabcontent`, usedDiv);
 			divForContent.parent(usedDiv);
 			renderOnePartOfHtml(child, currentDepth + 1, divForContent);
