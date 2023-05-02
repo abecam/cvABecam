@@ -229,12 +229,12 @@ function fetchJson(jsonPath) {
 			// Create partitions object to store objects based on depth
 			//const partitions = {};
 			jsonFound = json;
+
+			// Show the original JSon in the explanation div
+			syntaxHighlight(jsonFound);
 			// Call the traverseJson function with depth 0
 			traverseJson(json, 0, rootElement);
 		})
-	/*.catch(error => {
-	  console.error(`Error fetching or parsing JSON file: ${error}`);
-	});*/
 }
 // Function to recursively traverse the JSON object and store objects in partitions based on depth
 function traverseJson(obj, depth, currentElement) {
