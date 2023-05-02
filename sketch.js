@@ -42,6 +42,8 @@ function setup() {
 function windowResized() {
 	resizeCanvas(windowWidth - 10, windowHeight - 10);
 	ratio = windowWidth/windowHeight;
+
+	drawDiagram();
 }
 
 function renderInHtmlNoFiltering(rootElement) {
@@ -173,6 +175,7 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 	//usedDiv.html("</div>");
 	// Content
 }
+
 const digitToName = {
 	'0':'zero',
 	'1':'one',
@@ -221,7 +224,7 @@ function fetchJson(jsonPath) {
 // Function to recursively traverse the JSON object and store objects in partitions based on depth
 function traverseJson(obj, depth, currentElement) {
 
-	console.log("Depth is " + depth);
+	//console.log("Depth is " + depth);
 	// key value
 	// Object -> go deeper
 	// Other -> Store as content
@@ -297,14 +300,16 @@ function traverseJson(obj, depth, currentElement) {
 	
 	// We are back, calculate the boundaries
 
-	console.log("Nb elements: " + currentElement.nbOfElements() + " nb children: " + currentElement.nbOfChildren());
+	//console.log("Nb elements: " + currentElement.nbOfElements() + " nb children: " + currentElement.nbOfChildren());
+	/*
 	if (currentElement.parent != -1) {
 		console.log("I am " + currentElement.parent.nbInParent + " in my parent segment");
 	}
+	*/
 
 	// Call doSomething() when the full JSON browsing is finished
 	if (depth === 0) {
-		console.log("Current element " + currentElement.content); // Should always be root and only root (TODO: add test)
+		//console.log("Current element " + currentElement.content); // Should always be root and only root (TODO: add test)
 		// Finished, calculate the boundaries
 		// Element in columns aside children in columns too
 
@@ -314,9 +319,10 @@ function traverseJson(obj, depth, currentElement) {
 
 		renderInHtmlWithFiltering(currentElement);
 		//console.log("Sites 0: " + pointsForVoronoi);
-		//makeHouses(pointsForVoronoi);
 
 		cvInitialized = true;
+
+		drawDiagram();
 	}
 }
 
@@ -331,23 +337,8 @@ function doTheInitialDistribution(currentRootElement) {
 }
 
 function distributeObjectsOnPlane(element, xSize, ySize, fromX, fromY) {
-	let numObjects = 0;
+	let numObjects = element.elements.length + element.children.length;
 
-	for (let iElements = 0; iElements < element.elements.length; iElements++) {
-		oneElement = element.elements[iElements];
-		
-		if (oneElement.nbOfElements() + oneElement.nbOfChildren() > 0) {
-			numObjects++;
-		}
-	}
-
-	for (let iElements = 0; iElements < element.children.length; iElements++) {
-		oneElement = element.children[iElements];
-		
-		if (oneElement.nbOfElements() + oneElement.nbOfChildren() > 0) {
-			numObjects++;
-		}
-	}
 	//console.log(" AAAA: numObjects " + numObjects + " , " + element.nbOfChildren() + " : " + element.nbOfElements());
 
 	// Try to fit to our ratio
@@ -379,7 +370,7 @@ function distributeObjectsOnPlane(element, xSize, ySize, fromX, fromY) {
 			element.withColor = color(100+random(155),100+random(155),100+random(155))
 		}
 */
-		if (oneElement.nbOfElements() + oneElement.nbOfChildren() == 0) {
+		if (oneElement.type == TypeOfElement.Leaf) {
 			textToShow += oneElement.content + "\n";
 		}
 		//else
@@ -398,7 +389,7 @@ function distributeObjectsOnPlane(element, xSize, ySize, fromX, fromY) {
 			element.withColor = color(100+random(155),100+random(155),100+random(155))
 		}
 		*/
-		if (oneElement.nbOfElements() + oneElement.nbOfChildren() == 0) {
+		if (oneElement.type == TypeOfElement.Leaf) {
 			textToShow += oneElement.content + "\n";
 		}
 		//else
@@ -427,11 +418,11 @@ function distributeObjectsOnPlane(element, xSize, ySize, fromX, fromY) {
 		const yPos = fromY + row * cellHeight;
 
 		console.log(i+" on "+row +", "+col);
-		// Use xPos and yPos as the coordinates to place the object on the plane
+
 		//console.log(`Object: ${obj.key}: ${obj.value}`);
 		//console.log(" From " + fromX + " , " + fromY + " : " + col + " , " + row + " : " + i);
 		//console.log(`Position: x=${xPos}, y=${yPos}`);
-		// Alternatively, you can use xPos and yPos to dynamically create elements on the plane using DOM manipulation or other rendering techniques.
+
 		oneElement.xMin = xPos;
 		oneElement.yMin = yPos;
 
@@ -512,7 +503,7 @@ function drawElements(currentElement, currentDepth) {
 	}
 }
 
-function makeHouses(sites) {
+function drawVoronoi(sites) {
 	var voronoi = new Voronoi();
 	var bbox = { xl: 20, xr: windowWidth - 20, yt: 20, yb: windowHeight - 20 }; // xl is x-left, xr is x-right, yt is y-top, and yb is y-bottom
 	//var sites = [ {x: 200, y: 200}, {x: 50, y: 250}, {x: 400, y: 100}, {x: 200, y: 100}, {x: 300, y: 50} /* , ... */ ];
@@ -531,7 +522,10 @@ function makeHouses(sites) {
 	if (nEdges) {
 		let edge;
 
+		push();
 		stroke("red");
+		noFill();
+
 		//ctx.beginPath();
 		while (nEdges--) {
 
@@ -541,6 +535,8 @@ function makeHouses(sites) {
 
 			line(edge.va.x, edge.va.y, edge.vb.x, edge.vb.y);
 		}
+
+		pop();
 		//ctx.stroke();
 	}
 	// how many sites do we have?
@@ -573,7 +569,11 @@ function makeHouses(sites) {
 	//ctx.fillStyle = '#44f';
 	while (nSites--) {
 		site = sites[nSites];
+		push();
+		stroke(0, 0, 0);
+		noFill();
 		rect(site.x - 2 / 3, site.y - 2 / 3, 2, 2);
+		pop();
 	}
 	//ctx.fill();
 }
@@ -582,12 +582,17 @@ function mousePressed() {
 	// Check which element is selected and zoom in (out with left click?)
 }
 
+function drawDiagram()
+{
+	if (cvInitialized) {
+		drawAllElements();
+		drawVoronoi(pointsForVoronoi);
+	}
+}
+
 function draw() {
 	//background(64);
-	if (cvInitialized) {
-		//makeHouses(pointsForVoronoi);
-		drawAllElements();
-	}
+	
 }
 
 const TypeOfElement = {

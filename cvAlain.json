@@ -15,7 +15,7 @@
 			"github": "<a href=\"https://github.com/abecam\" target=”_blank” >GitHub repository</a>"
 		},
 		"webPages": [
-			"<a href=\"https://www.thegiantball.com/\" target=”_blank” >TheGiantBall Blog</a>, desciption of various projects and some privacy policies (mostly) for the Android Games.",
+			"<a href=\"https://www.thegiantball.com/\" target=”_blank” >TheGiantBall Blog</a>, description of various projects and some privacy policies (mostly) for the Android Games.",
 			"<a href=\"https://www.ethical-game.org/\" target=”_blank” >Ethical Game</a>, instructions for parents and developers about ethical and non-ethical practices in video games",
 			"<a href=\"https://thefilter.shop/\" target=”_blank” >The Filter Shop</a>, a work-in-progress place to filter out non-ethical products and push ethical products to the front."
 		]
@@ -128,135 +128,80 @@
 	],
 	"Work Experience": {
 		"Jan 2021 - Feb 2023" : {
-			"filterValues":{
-				"from Year": "2021",
-				"to Year": "2023",
-				"from Month": "Jan",
-				"to Month": "Feb"
-			},
 			"Company": "Heidelberg Institute  for Theoretical Studies (HITS)",
 			"City": "Heidelberg",
 			"Country": "Germany",
 			"Title": "Research Assistant (Senior Software Engineer)",
-			"Work accomplished": {
-				"Main task" : "Software engineer/System administrator for the LiSyM Cancer project and HITS publications and Seek repositories",
-				"Details": [
-					"co-development in Ruby on Rails of Seek, a data management application mostly intended for Life Sciences (<a href=\"https://github.com/seek4science/seek\" target=”_blank” >Seek4Science</a>), including improving the OpenBis connector, Ruby&Java (<a href=\"https://github.com/FAIRdom/openseek-api-gem\" target=”_blank” >OpenSeek API Gem</a> & <a href=\"https://github.com/FAIRdom/openseek-api\" target=”_blank” >OpenSeek API</a>)",
-					"installation and administration of NextCloud, OpenBis, Authentik, Omero, administration of LiSyM Seek (<a href=\"https://seek.lisym.org/\" target=”_blank” >LiSyM Seek</a>) and co-administration of several other web applications using Docker and Docker-Compose, Linux Ubuntu Server. Full set-up of central identity, including the choice of Authentik, between Authentik and the other servers, through LDAP and OpenID.",
-					"Trainings and presentations around Seek and NextCloud: using the API, using the OpenBis connector.",
-					"Other development for Seek and various utilities scripts in Python and Ruby."
-				]
-			}
+			"Main task" : "Software engineer/System administrator for the LiSyM Cancer project and HITS publications and Seek repositories",
+			"Details": [
+				"co-development in Ruby on Rails of Seek, a data management application mostly intended for Life Sciences (<a href=\"https://github.com/seek4science/seek\" target=”_blank” >Seek4Science</a>), including improving the OpenBis connector, Ruby&Java (<a href=\"https://github.com/FAIRdom/openseek-api-gem\" target=”_blank” >OpenSeek API Gem</a> & <a href=\"https://github.com/FAIRdom/openseek-api\" target=”_blank” >OpenSeek API</a>)",
+				"installation and administration of NextCloud, OpenBis, Authentik, Omero, administration of LiSyM Seek (<a href=\"https://seek.lisym.org/\" target=”_blank” >LiSyM Seek</a>) and co-administration of several other web applications using Docker and Docker-Compose, Linux Ubuntu Server. Full set-up of central identity, including the choice of Authentik, between Authentik and the other servers, through LDAP and OpenID.",
+				"Trainings and presentations around Seek and NextCloud: using the API, using the OpenBis connector.",
+				"Other development for Seek and various utilities scripts in Python and Ruby."
+			]
+			
 		},
 		"Sept 2019 - Dec 2021" : {
-			"filterValues":{
-				"from Year": "2019",
-				"to Year": "2021",
-				"from Month": "Sept",
-				"to Month": "Dec"
-			},
 			"Company": "Independent",
 			"City": "Heidelberg",
 			"Country": "Germany",
 			"Title": "Sole owner, mostly software developer",
-			"Work accomplished": {
-				"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
-				"Details": [
-					"One is self-published on Steam: <a href=\"https://store.steampowered.com/app/1378660/NYAF/\" target=”_blank”>NYAF</a> - and Android, the 3 others were published on <a href=\"https://play.google.com/store/apps/developer?id=Alain+Becam\" target=”_blank” >Android</a>.",
-					"Improvements of my former Applets games and of a names generator started in 2017, published on <a href=\"https://tgbb.itch.io/\" target=”_blank” >Itch.io</a>, and all sources available on <a href=\"https://bitbucket.org/abecam/\" target=”_blank” >BitBucket</a>.",
-					"Started the development of a new monitoring service in Java to monitor Production environments, with the option of using metadata for finding anomalies. "
-				]
-			}
+			"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
+			"Details": [
+				"One is self-published on Steam: <a href=\"https://store.steampowered.com/app/1378660/NYAF/\" target=”_blank”>NYAF</a> - and Android, the 3 others were published on <a href=\"https://play.google.com/store/apps/developer?id=Alain+Becam\" target=”_blank” >Android</a>.",
+				"Improvements of my former Applets games and of a names generator started in 2017, published on <a href=\"https://tgbb.itch.io/\" target=”_blank” >Itch.io</a>, and all sources available on <a href=\"https://bitbucket.org/abecam/\" target=”_blank” >BitBucket</a>.",
+				"Started the development of a new monitoring service in Java to monitor Production environments, with the option of using metadata for finding anomalies. "
+			]
 		},
 		"Mar 2010 - Sept 2019" : {
-			"filterValues":{
-				"from Year": "2010",
-				"to Year": "2019",
-				"from Month": "Mar",
-				"to Month": "Sept"
-			},
 			"Company": "EMBL Heidelberg",
 			"City": "Heidelberg",
 			"Country": "Germany",
 			"Title": "Senior Software Engineer / Analyst, IT Services",
-			"Work accomplished": {
-				"Main task" : "Development, maintenance and support level 3 of in-house software, support level 2 for off-the-shelf solutions.",
-				"Details": [
-					{
-						"filterValues":{
-							"from Year": "2011",
-							"to Year": "2019",
-							"from Month": "June",
-							"to Month": "Sept"
-						},
-						"tasks accomplished":[
-							"Rewrote the person and services-related backend infrastructure, Java with EmpireDB and UnboundID, Tomcat, Oracle database and LDAP. Configuration, deployment and maintenance.",
-							"Wrote the corresponding web-applications as RIA using Vaadin: mailing list management, online phone book editor, web directory editor…",
-							"All backend services, cron-jobs and web applications are resilient, will not corrupt data if stopped, and will restart on their own and complete their process including the missing data.",
-							"Migration of our applications code base to from CVS to Git and GitLab with CI and containerization.",
-							"Rewrote the login system to support SSO.",
-							"Technical support and customisation of our CRIS, Converis. Replaced the internal notification system by Python scripts running through cronjobs.",
-							"Maintained most legacy applications, refactored and enhanced them.",
-							"General support of end-users, level 2 and mostly 3, using the ticket system Kayako.",
-							"Together with another colleague, emergency replacement of a colleague: finished and supported a new web-application for the e-recruitment of postdoctoral students, written using aspects, Spring ROO, Google Guice and Hibernate.",
-							"Part of the reviewers for new applicants, and took the decision to write a technical test that has been used for all new applications after."
-						]
-					},
-					{
-						"filterValues":{
-							"from Year": "2010",
-							"to Year": "2011",
-							"from Month": "Mar",
-							"to Month": "June"
-						},
-						"tasks accomplished":[
-							"Fixed most critical issues of the legacy system, mostly memory and classloaders leaks.",
-							"Wrote a thread monitor allowing to fix all deadlocks and race conditions.",
-							"Changed the log system from an in-house solution to Logback, adding levels to each entries and adding many logs entries, replaced the separated warning by email by an email appender for error level of the logs."
-						]
-					}
-				]
+			"Main task" : "Development, maintenance and support level 3 of in-house software, support level 2 for off-the-shelf solutions.",
+			"Details": {
+				"June 2011 - Sept 2019": {
+					"tasks accomplished":[
+						"Rewrote the person and services-related backend infrastructure, Java with EmpireDB and UnboundID, Tomcat, Oracle database and LDAP. Configuration, deployment and maintenance.",
+						"Wrote the corresponding web-applications as RIA using Vaadin: mailing list management, online phone book editor, web directory editor…",
+						"All backend services, cron-jobs and web applications are resilient, will not corrupt data if stopped, and will restart on their own and complete their process including the missing data.",
+						"Migration of our applications code base to from CVS to Git and GitLab with CI and containerization.",
+						"Rewrote the login system to support SSO.",
+						"Technical support and customisation of our CRIS, Converis. Replaced the internal notification system by Python scripts running through cronjobs.",
+						"Maintained most legacy applications, refactored and enhanced them.",
+						"General support of end-users, level 2 and mostly 3, using the ticket system Kayako.",
+						"Together with another colleague, emergency replacement of a colleague: finished and supported a new web-application for the e-recruitment of postdoctoral students, written using aspects, Spring ROO, Google Guice and Hibernate.",
+						"Part of the reviewers for new applicants, and took the decision to write a technical test that has been used for all new applications after."
+					]
+				},
+				"Mar 2010 - June 2011":{
+					"tasks accomplished":[
+						"Fixed most critical issues of the legacy system, mostly memory and classloaders leaks.",
+						"Wrote a thread monitor allowing to fix all deadlocks and race conditions.",
+						"Changed the log system from an in-house solution to Logback, adding levels to each entries and adding many logs entries, replaced the separated warning by email by an email appender for error level of the logs."
+					]
+				}
 			}
 		},
 		"Sept 2008 - Feb 2010" : {
-			"filterValues":{
-				"from Year": "2008",
-				"to Year": "2010",
-				"from Month": "Sept",
-				"to Month": "Feb"
-			},
 			"Company": "ECA Faros",
 			"City": "Lannion",
 			"Country": "France",
 			"Title": "Senior Engineer, Research & Development",
-			"Work accomplished": {
-				"Main task" : "Research, development, maintenance and support level 3 of our driving simulator, conception of a network support.",
-				"Details": [
-					{
-						"filterValues":{
-							"from Year": "2009",
-							"to Year": "2010",
-							"from Month": "June",
-							"to Month": "Feb"
-						},
+			"Main task" : "Research, development, maintenance and support level 3 of our driving simulator, conception of a network support.",
+			"Details": {
+				"June 2009 - Feb 2010": {
 						"tasks accomplished":[
 							"Conception of an adapted network support: an efficient high-level library, supporting objects’ replications and synchronisations, client-server or peer to peer connections, and with the possibility to change the low-level network library. Adhoc and soft-realtime, it also used dead-reckoning and trajectory correction by interpolation to avoid rubber-banding. The first finished version used ENet ( http://sauerbraten.org/enet/ )as the low-level network library."
 						]
 					},
-					{
-						"filterValues":{
-							"from Year": "2008",
-							"to Year": "2009",
-							"from Month": "Sept",
-							"to Month": "May"
-						},
+					"Sept 2008 - May 2009": {
 						"tasks accomplished":[
 							"Corrected and developed the activities for the simulator software, JavaScript and C++.",
 							"Modernised the documentation and the bug reporting processes, and supervised the installation of an online bug tracking system (Mantis), and of a wiki (mediawiki). ",
 							"Supervised the stable release of the simulator, taking care of having all issues fixed."
 						]
 					}
-				]
 			}
 		},
 		"From 2006" : {
@@ -265,70 +210,41 @@
 			},
 			"Company": "www.TheGiantBall.com",
 			"Title": "Independent developer",
-			"Work accomplished": {
-				"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
-				"Details": [
-					"Development of several prototypes as proof-of-concept for convincing a Sport Watch company to add maps support on their watches. The most useful prototype is available on GitHub: <a href=\"https://github.com/abecam/MapsForAll\" target=”_blank” >MapsForAll</a>.\nThe project proposal got me a discussion with the product manager of the company but collaborating would only have been possible with a relocation to their country, which was not possible.\nThis prototype development learnt me how to develop on a Garmin watch and I developed several other applications and watchface, one being released: https://apps.garmin.com/en-US/apps/3fdc7678-2892-4214-9c9d-97f37fe64a15",
-					"Development of various small applications for Android in stereoscopic 3D, using the Rajawali 3D API,  then a board game released only as a demo in C# with Unity3D.",
-					"Conception and development of a 2D game engine in Java used in 2 games played by more than 6000 persons online.",
-					"Android Developer Challenge: full conception of a geolocalised game, the Treasures Chests, and using web-services writen with CakePHP using MySQL for building personnalised hunts. See the explanation here: <a href=\"https://www.youtube.com/watch?v=MLYwwj6ZUd4\" target=”_blank” >The Treasure Chests explanation</a>",
-					"Conception and development of various Applet games, including a multiplayer social experiment using a dedicated server using TCP connection and using the IP address to find the player country using IP ranges for countries (more details here: <a href=\"http://www.thegiantball.com/2020/07/the-giant-ball.html\" target=”_blank” >An history of the giant ball</a>). Together played by around 100.000 persons from 83 countries.",
-					"Conception and development of a physic based 3D game, in C++ using Ogre3D and the Newton physics API. Modified it to a tutorial example, with the addition of multiplayer using TCP."
-				]
-			}
+			"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
+			"Details": [
+				"Development of several prototypes as proof-of-concept for convincing a Sport Watch company to add maps support on their watches. The most useful prototype is available on GitHub: <a href=\"https://github.com/abecam/MapsForAll\" target=”_blank” >MapsForAll</a>.\nThe project proposal got me a discussion with the product manager of the company but collaborating would only have been possible with a relocation to their country, which was not possible.\nThis prototype development learnt me how to develop on a Garmin watch and I developed several other applications and watchface, one being released: https://apps.garmin.com/en-US/apps/3fdc7678-2892-4214-9c9d-97f37fe64a15",
+				"Development of various small applications for Android in stereoscopic 3D, using the Rajawali 3D API,  then a board game released only as a demo in C# with Unity3D.",
+				"Conception and development of a 2D game engine in Java used in 2 games played by more than 6000 persons online.",
+				"Android Developer Challenge: full conception of a geolocalised game, the Treasures Chests, and using web-services writen with CakePHP using MySQL for building personnalised hunts. See the explanation here: <a href=\"https://www.youtube.com/watch?v=MLYwwj6ZUd4\" target=”_blank” >The Treasure Chests explanation</a>",
+				"Conception and development of various Applet games, including a multiplayer social experiment using a dedicated server using TCP connection and using the IP address to find the player country using IP ranges for countries (more details here: <a href=\"http://www.thegiantball.com/2020/07/the-giant-ball.html\" target=”_blank” >An history of the giant ball</a>). Together played by around 100.000 persons from 83 countries.",
+				"Conception and development of a physic based 3D game, in C++ using Ogre3D and the Newton physics API. Modified it to a tutorial example, with the addition of multiplayer using TCP."
+			]
 		},
 		"Sept 2004 - Feb 2008" : {
-			"filterValues":{
-				"from Year": "2004",
-				"to Year": "2008",
-				"from Month": "Sept",
-				"to Month": "Feb"
-			},
 			"Company": "University of Gotland",
 			"City": "Visby",
 			"Country": "Sweden",
 			"Title": "Research Scientist, Technical Lead (first year), FP6-project IPerG",
-			"Work accomplished": {
-				"Main task" : "Development of several working game prototypes, C++ and Java, 2D and 3D. Research and development for the use of ontologies and knowledge in video-games.",
-				"Details": [
-					{
-						"filterValues":{
-							"from Year": "2007",
-							"to Year": "2008",
-							"from Month": "Aug",
-							"to Month": "Feb"
-						},
-						"tasks accomplished":[
-							"Conceived and developed in Java an “environment” service, fetching weather data from METAR servers and calculating moon and sun phases.",
-							"Lectures on network programming for games.",
-							"Supervision of the Research group in the game development, set-up and support of the group web pages."
-						]
-					},
-					{
-						"filterValues":{
-							"from Year": "2006",
-							"to Year": "2007",
-							"from Month": "Sept",
-							"to Month": "July"
-						},
-						"tasks accomplished":[
-							"Lectures for the use of ontologies in video-games to PhD students.",
-							"Development of several working game prototypes, C++ and Java, 2D and 3D, as tutorials and for supporting the development in the IPerG project"
-						]
-					}
-					,
-					{
-						"filterValues":{
-							"from Year": "2004",
-							"to Year": "2005",
-							"from Month": "Sept",
-							"to Month": "June"
-						},
-						"tasks accomplished":[
-							"Technical lead: Conception and development of a peer-to-peer and client/server system in Java and a PC 3D client. Supervision of 3 others engineers to develop a mobile \"client\" (J2ME with a dedicated server), the server was the client of our main server and of one student to add a chat and a simple DB persistence."
-						]
-					}
-				]
+			"Main task" : "Development of several working game prototypes, C++ and Java, 2D and 3D. Research and development for the use of ontologies and knowledge in video-games.",
+			"Details": {
+				"Aug 2007 - Feb 2008": {
+					"tasks accomplished":[
+						"Conceived and developed in Java an “environment” service, fetching weather data from METAR servers and calculating moon and sun phases.",
+						"Lectures on network programming for games.",
+						"Supervision of the Research group in the game development, set-up and support of the group web pages."
+					]
+				},
+				"Sept 2006 - July 2007":{
+					"tasks accomplished":[
+						"Lectures for the use of ontologies in video-games to PhD students.",
+						"Development of several working game prototypes, C++ and Java, 2D and 3D, as tutorials and for supporting the development in the IPerG project"
+					]
+				},
+				"Sept 2004 - June 2005":{
+					"tasks accomplished":[
+						"Technical lead: Conception and development of a peer-to-peer and client/server system in Java and a PC 3D client. Supervision of 3 others engineers to develop a mobile \"client\" (J2ME with a dedicated server), the server was the client of our main server and of one student to add a chat and a simple DB persistence."
+					]
+				}
 			}
 		},
 		"2003 - 2004" : {
@@ -340,9 +256,7 @@
 			"Title": "Research & Development",
 			"City": "Villeurbanne",
 			"Country": "France",
-			"Work accomplished": {
-				"Main task" : "In an attempt to start a new company, worked with an associate on different applications, mostly C++ using DirectX and DirectShow. A fully working prototype has been developed involving computer vision (C++ and DDK)."
-			}
+			"Main task" : "In an attempt to start a new company, worked with an associate on different applications, mostly C++ using DirectX and DirectShow. A fully working prototype has been developed involving computer vision (C++ and DDK)."
 		},
 		"2001 - 2003" : {
 			"filterValues":{
@@ -353,14 +267,12 @@
 			"City": "Villeurbanne",
 			"Country": "France",
 			"Title": "Part-time assistant professor",
-			"Work accomplished": {
-				"Main task" : "Courses in hardware architecture and compilation, Research",
-				"Details": [
-					"Courses in hardware architecture using WindRiver VxWorks and in compilation.",
-					"Courses in compilation, using a two-level grammar compiler (STARLET).",
-					"Research on the subject “interoperability of urban models and data” for my thesis, using Knowledge management, Meta-data, Ontology and software orchestration."
-				]
-			}
+			"Main task" : "Courses in hardware architecture and compilation, Research",
+			"Details": [
+				"Courses in hardware architecture using WindRiver VxWorks and in compilation.",
+				"Courses in compilation, using a two-level grammar compiler (STARLET).",
+				"Research on the subject “interoperability of urban models and data” for my thesis, using Knowledge management, Meta-data, Ontology and software orchestration."
+			]
 		},
 		"1998 - 2001" : {
 			"filterValues":{
@@ -371,13 +283,69 @@
 			"City": "Villeurbanne & Bourg en Bresse",
 			"Country": "France",
 			"Title": "Associate lecturer",
-			"Work accomplished": {
-				"Main task" : "Courses in computer sciences. Research for my thesis.",
-				"Details": [
-					"Courses in computer sciences: C++/Java/Perl and algorithmic, SQL, relational algebra, Oracle, Access, DBMS, Client/Server, Unix, Industrial engineering",
-					"Research for my thesis."
-				]
-			}
+			"Main task" : "Courses in computer sciences. Research for my thesis.",
+			"Details": [
+				"Courses in computer sciences: C++/Java/Perl and algorithmic, SQL, relational algebra, Oracle, Access, DBMS, Client/Server, Unix, Industrial engineering",
+				"Research for my thesis."
+			]
+		}
+	},
+	"Referees": {
+		"Referees": "Available upon request"
+	},
+	"Miscellaneous": {
+		"Hobbies": "computer sciences, running, reading, writing, music,theatre, travel."
+	},
+	"Annex 1 - Publications": {
+		"2002 - PhD Thesis":
+		{
+			"Citation": "Becam A. :Yehudi : un environnement pour l'interopérabilité de modèles urbains distribués et hétérogènes. PhD Thesis : Institut National des Sciences Appliquées de Lyon, 2002, 166 pp."
+		},
+		"1998-2008 - Eight articles in international conferences with committee":
+		{
+			"Citations" : [
+				"Becam A., Nenonen . V.A.A. : Designing and Creating Environment Aware Games, In: 1st IEEE International Workshop on Digital Entertainment, Networked Virtual Environments, and Creative Technology, Las Vegas, NV, USA, January 12, 2008",
+				"Becam A. : A Location-Based Knowledge Layer for RPG and Adventure Computer Games, In: Game Set and Match II, Kas Oosterhuis and Lukas Feireiss editors, 29 Mar.- 1 Apr. 2006, Delft, Netherlands. ISBN 9059730364",
+				"Becam A. : An easy-to-use Platform Aimed at the Development of MMORPG and Demanding Networked Applications, In: CGAMES 2005, 7th International Conference on Computer Games, Quasim Mehdi and Norman Gough editors, 28-30 Nov. 2005, Angoulème, France. ISBN 0-9549016-2-6",
+				"Becam A., Miquel M., Laurini R. : Managing the Interconnection and the Distribution of Urban Models with XML and Distributed Objects. In: IRMA 2003, Information Technology and Organisations: Trends, Issues, Challenges and Solutions. May 18-21, 2003. Radisson Warwick Hotel, Philadelphia Pennsylvania, USA",
+				"Becam A., Miquel M. : Une ontologie orientée document pour l'interopérabilité de modèles urbains. In: SETIT 2003, Sciences Électroniques, Technologies de l'Information et des Télécommunications. 17-21 Mars 2003. Sousse, Tunisie.",
+				"Becam A., Miquel M., Laurini R. : Yehudi: An Orchestrated System for the Interoperability of Urban Data and Models. In: Sha E. Ed., 14th International Conference on Parallel and Distributed Computing Systems, 2001, 8-10 August, Dallas, Texas USA. Cary: ISCA, 2001, pp 272-277. ISBN 1-880843-39-0",
+				"Becam A., Miquel M., Laurini R. : A Distributed Environment using Ontology for the Interoperability of Urban Data and Models. In: Geographical Domain & Geographical Information systems-EuroConference on the Ontology and Epistemology for Spatial Data Standards, 22 - 27 September 2000, La Londe-les-Maures (France), pp 11-15. (GeoInfo n°19)",
+				"Becam A., Miquel M. : Model's Encapsulation for Interoperability between Urban Data and Models. In: Spaccapietra S. Ed. Proceedings of the International Workshop on Emerging Technologies for Geo-Based Applications, Ascona, Switzerland, May 22-25, 2000. Lausanne: EPFL,  2000,  pp 275-282."
+			]
+		}
+	},
+	"Annex 2 - Supervisions": {
+		"2011-2019":
+		{
+			"Supervision": "Supervision and co-supervision of one to three students to help us for 6 months every year."
+		},
+		"2009":
+		{
+			"Supervision": "Supervision of three engineers to implement and integrate the new multi-user functionalities in the simulator software. Supervision of one bachelor student to finish the installation and configuration of a wiki and of a bug tracking system and the migration from CVS to SVN. Co-supervision of one student for its technical internship, to implement dynamics animations for pedestrians."
+		},
+		"2007":
+		{
+			"Supervision": "Supervision of two masters students to realize an innovative game in Java using JMonkey (<a href=\"http://houseofbubbles.blogspot.com/\" target=”_blank”>House of bubbles</a>), and my own distributed solution (<a href=\"http://code.google.com/p/hlm/\" target=”_blank”>High Level Manager</a>). Worked with the Leonardo office at TU Ilmenau and with the International Secretary at the University of Gotland to arrange their stay."
+		},
+		"2005 - Technical Lead for the MMRO package of the IPerG project":
+		{
+			"Supervision": [
+				"Supervision of a Master-level student for a six months internship to develop a chat and persistency support in the MMRO prototype for IPerG.",
+				"Supervision of 3 remote colleagues for the development of the mobile game part of the MMRO prototype. Their server was connected of the central client-server solution I wrote."
+			]
+		},
+		"2001-2002":
+		{
+			"Supervision": "Co-supervision of two Master-level students from the INSA of Lyon for their final thesis (equivalent to 4 months full-time). I mostly helped them technically with the mechanisms of information exchanges in distributed environments."
+		},
+		"2000-2001":
+		{
+			"Supervision": "Co-supervision of two Master-level students from the INSA of Lyon for their final thesis (equivalent to 4 months full-time). I helped them with the definition of meta-data and with the description of treatments using XML. Co-supervision of one student at Master-level, linked with my research, to investigate the possible continuity of my research work with a stronger focus on ontologies."
+		},
+		"2000":
+		{
+			"Supervision": "Supervision of one student for its technical internship (2 years after A-levels), 2 months in computer science: conception of a distributed component system, using Java RMI. This system allowed the abstraction of heterogeneous Java classes to link them."
 		}
 	}
 }
