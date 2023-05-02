@@ -3,44 +3,47 @@
 		"fullName": "Dr. Alain Becam",
 		"homeAddress": {
 			"description": "Address",
-			"content": {
-				"street": "A Street",
-				"code": "55555",
-				"city": "Somewhere",
-				"country": "Germany"
-			}
+			"content": "Available upon request"
 		},
-		"Phone Numbers": {
-			"mobile": "+49 (0) 111 111 111"
-		},
+		"Phone Numbers": "Available upon request",
 		"email Addresses": [
-			"test@test.com",
-			"test@thegiantball.com"
+			"contact@thegiantball.com"
 		],
 		"linkedIn": "www.linkedin.com/in/abecam/",
-		"webPage": "www.thegiantball.com/"
+		"github": "https://github.com/abecam",
+		"webPages": [
+			"www.thegiantball.com/",
+			"ethical-game.org",
+			"thefilter.shop"
+		]
 	},
 	"Education": {
 		"Cursus": [
 			{
-				"startYear": "1998",
-				"endYear": "2002",
+				"filterValues":{
+					"from Year": "1998",
+					"to Year": "2002"
+				},
 				"Institution": "Insa de Lyon",
 				"City": "Villeurbanne",
 				"Country": "France",
 				"Diploma": "PhD in Computer Science"
 			},
 			{
-				"startYear": "1995",
-				"endYear": "1998",
+				"filterValues":{
+					"from Year": "1995",
+					"to Year": "1998"
+				},
 				"Institution": "Université de Bourgogne",
 				"City": "Dijon",
 				"Country": "France",
 				"Diploma": "MSc in Computer Sciences for the images"
 			},
 			{
-				"startYear": "1993",
-				"endYear": "1995",
+				"filterValues":{
+					"from Year": "1993",
+					"to Year": "1995"
+				},
 				"Institution": "IUT Informatique de Dijon",
 				"City": "Dijon",
 				"Country": "France",
@@ -137,15 +140,256 @@
 	],
 	"Work Experience": [
 		{
-			"startMonth": "Jan",
-			"startYear": "2021",
-			"endMonth": "Feb",
-			"endYear": "2023",
-			"Company": "Insa de Lyon",
+			"filterValues":{
+				"from Year": "2021",
+				"to Year": "2021",
+				"from Month": "Jan",
+				"to Month": "Feb"
+			},
+			"Company": "Heidelberg Institute  for Theoretical Studies (HITS)",
+			"City": "Heidelberg",
+			"Country": "Germany",
+			"Title": "Research Assistant (Senior Software Engineer)",
+			"Work accomplished": {
+				"Main task" : "Software engineer/System administrator for the LiSyM Cancer project and HITS publications and Seek repositories",
+				"Details": [
+					"co-development in Ruby on Rails of Seek, a data management application mostly intended for Life Sciences (https://github.com/seek4science/seek), including improving the OpenBis connector, Ruby&Java (https://github.com/FAIRdom/openseek-api-gem & https://github.com/FAIRdom/openseek-api)",
+					"installation and administration of NextCloud, OpenBis, Authentik, Omero, administration of LiSyM Seek (https://seek.lisym.org/) and co-administration of several other web applications using Docker and Docker-Compose, Linux Ubuntu Server. Full set-up of central identity, including the choice of Authentik, between Authentik and the other servers, through LDAP and OpenID.",
+					"Trainings and presentations around Seek and NextCloud: using the API, using the OpenBis connector.",
+					"Other development for Seek and various utilities scripts in Python and Ruby."
+				]
+			}
+		},
+		{
+			"filterValues":{
+				"from Year": "2021",
+				"to Year": "2021",
+				"from Month": "Sept",
+				"to Month": "Dec"
+			},
+			"Company": "Independent",
+			"City": "Heidelberg",
+			"Country": "Germany",
+			"Title": "Sole owner, mostly software developer",
+			"Work accomplished": {
+				"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
+				"Details": [
+					"One is self-published on Steam: https://store.steampowered.com/app/1378660/NYAF/ - and Android, the 3 others were published on Android: https://play.google.com/store/apps/developer?id=Alain+Becam.",
+					"Improvements of my former Applets games and of a names generator started in 2017, publishing on Itch.io: https://tgbb.itch.io/ , and all sources available on BitBucket: https://bitbucket.org/abecam/.",
+					"Started the development of a new monitoring service in Java to monitor Production environments, with the option of using metadata for finding anomalies. "
+				]
+			}
+		},
+		{
+			"filterValues":{
+				"from Year": "2010",
+				"to Year": "2019",
+				"from Month": "Mar",
+				"to Month": "Sept"
+			},
+			"Company": "EMBL Heidelberg",
+			"City": "Heidelberg",
+			"Country": "Germany",
+			"Title": "Senior Software Engineer / Analyst, IT Services",
+			"Work accomplished": {
+				"Main task" : "Development, maintenance and support level 3 of in-house software, support level 2 for off-the-shelf solutions.",
+				"Details": [
+					{
+						"filterValues":{
+							"from Year": "2011",
+							"to Year": "2019",
+							"from Month": "June",
+							"to Month": "Sept"
+						},
+						"tasks accomplished":[
+							"Rewrote the person and services-related backend infrastructure, Java with EmpireDB and UnboundID, Tomcat, Oracle database and LDAP. Configuration, deployment and maintenance.",
+							"Wrote the corresponding web-applications as RIA using Vaadin: mailing list management, online phone book editor, web directory editor…",
+							"All backend services, cron-jobs and web applications are resilient, will not corrupt data if stopped, and will restart on their own and complete their process including the missing data.",
+							"Migration of our applications code base to from CVS to Git and GitLab with CI and containerization.",
+							"Rewrote the login system to support SSO.",
+							"Technical support and customisation of our CRIS, Converis. Replaced the internal notification system by Python scripts running through cronjobs.",
+							"Maintained most legacy applications, refactored and enhanced them.",
+							"General support of end-users, level 2 and mostly 3, using the ticket system Kayako.",
+							"Together with another colleague, emergency replacement of a colleague: finished and supported a new web-application for the e-recruitment of postdoctoral students, written using aspects, Spring ROO, Google Guice and Hibernate.",
+							"Part of the reviewers for new applicants, and took the decision to write a technical test that has been used for all new applications after."
+						]
+					},
+					{
+						"filterValues":{
+							"from Year": "2010",
+							"to Year": "2011",
+							"from Month": "Mar",
+							"to Month": "June"
+						},
+						"tasks accomplished":[
+							"Fixed most critical issues of the legacy system, mostly memory and classloaders leaks.",
+							"Wrote a thread monitor allowing to fix all deadlocks and race conditions.",
+							"Changed the log system from an in-house solution to Logback, adding levels to each entries and adding many logs entries, replaced the separated warning by email by an email appender for error level of the logs."
+						]
+					}
+				]
+			}
+		},
+		{
+			"filterValues":{
+				"from Year": "2008",
+				"to Year": "2010",
+				"from Month": "Sept",
+				"to Month": "Feb"
+			},
+			"Company": "ECA Faros",
+			"City": "Lannion",
+			"Country": "France",
+			"Title": "Senior Engineer, Research & Development",
+			"Work accomplished": {
+				"Main task" : "Research, development, maintenance and support level 3 of our driving simulator, conception of a network support.",
+				"Details": [
+					{
+						"filterValues":{
+							"from Year": "2009",
+							"to Year": "2010",
+							"from Month": "June",
+							"to Month": "Feb"
+						},
+						"tasks accomplished":[
+							"Conception of an adapted network support: an efficient high-level library, supporting objects’ replications and synchronisations, client-server or peer to peer connections, and with the possibility to change the low-level network library. Adhoc and soft-realtime, it also used dead-reckoning and trajectory correction by interpolation to avoid rubber-banding. The first finished version used ENet ( http://sauerbraten.org/enet/ )as the low-level network library."
+						]
+					},
+					{
+						"filterValues":{
+							"from Year": "2008",
+							"to Year": "2009",
+							"from Month": "Sept",
+							"to Month": "May"
+						},
+						"tasks accomplished":[
+							"Corrected and developed the activities for the simulator software, JavaScript and C++.",
+							"Modernised the documentation and the bug reporting processes, and supervised the installation of an online bug tracking system (Mantis), and of a wiki (mediawiki). ",
+							"Supervised the stable release of the simulator, taking care of having all issues fixed."
+						]
+					}
+				]
+			}
+		},
+		{
+			"filterValues":{
+				"from Year": "2006"
+			},
+			"Company": "www.TheGiantBall.com",
+			"Title": "Independent developer",
+			"Work accomplished": {
+				"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
+				"Details": [
+					"Development of several prototypes as proof-of-concept for convincing a Sport Watch company to add maps support on their watches. The most useful prototype is available on GitHub: https://github.com/abecam/MapsForAll.\nThe project proposal got me a discussion with the product manager of the company but collaborating would only have been possible with a relocation to their country, which was not possible.\nThis prototype development learnt me how to develop on a Garmin watch and I developed several other applications and watchface, one being released: https://apps.garmin.com/en-US/apps/3fdc7678-2892-4214-9c9d-97f37fe64a15",
+					"Development of various small applications for Android in stereoscopic 3D, using the Rajawali 3D API,  then a board game released only as a demo in C# with Unity3D.",
+					"Conception and development of a 2D game engine in Java used in 2 games played by more than 6000 persons online.",
+					"Android Developer Challenge: full conception of a geolocalised game, the Treasures Chests, and using web-services for building personnalised hunts.",
+					"Conception and development of various Applet games, including a multiplayer social experiment using a dedicated server using TCP connection and using the IP address to find the player country using IP ranges for countries (more details here: http://www.thegiantball.com/2020/07/the-giant-ball.html). Together played by around 100.000 persons from 83 countries.",
+					"Conception and development of a physic based 3D game, in C++ using Ogre3D and the Newton physics API. Modified it to a tutorial example, with the addition of multiplayer using TCP."
+				]
+			}
+		},
+		{
+			"filterValues":{
+				"from Year": "2004",
+				"to Year": "2008",
+				"from Month": "Sept",
+				"to Month": "Feb"
+			},
+			"Company": "University of Gotland",
+			"City": "Visby",
+			"Country": "Sweden",
+			"Title": "Research Scientist, Technical Lead (first year), FP6-project IPerG",
+			"Work accomplished": {
+				"Main task" : "Development of several working game prototypes, C++ and Java, 2D and 3D. Research and development for the use of ontologies and knowledge in video-games.",
+				"Details": [
+					{
+						"filterValues":{
+							"from Year": "2007",
+							"to Year": "2008",
+							"from Month": "Aug",
+							"to Month": "Feb"
+						},
+						"tasks accomplished":[
+							"Conceived and developed in Java an “environment” service, fetching weather data from METAR servers and calculating moon and sun phases.",
+							"Lectures on network programming for games.",
+							"Supervision of the Research group in the game development, set-up and support of the group web pages."
+						]
+					},
+					{
+						"filterValues":{
+							"from Year": "2006",
+							"to Year": "2007",
+							"from Month": "Sept",
+							"to Month": "July"
+						},
+						"tasks accomplished":[
+							"Lectures for the use of ontologies in video-games to PhD students.",
+							"Development of several working game prototypes, C++ and Java, 2D and 3D, as tutorials and for supporting the development in the IPerG project"
+						]
+					}
+					,
+					{
+						"filterValues":{
+							"from Year": "2004",
+							"to Year": "2005",
+							"from Month": "Sept",
+							"to Month": "June"
+						},
+						"tasks accomplished":[
+							"Technical lead: Conception and development of a peer-to-peer and client/server system in Java and a PC 3D client. Supervision of 3 others engineers to develop a mobile \"client\" (J2ME with a dedicated server), the server was the client of our main server and of one student to add a chat and a simple DB persistence."
+						]
+					}
+				]
+			}
+		},
+		{
+			"filterValues":{
+				"from Year": "2003",
+				"to Year": "2004"
+			},
+			"Company": "Independent",
+			"Title": "Research & Development",
 			"City": "Villeurbanne",
 			"Country": "France",
-			"Title": "PhD in Computer Science",
-			"Description": ""
+			"Work accomplished": {
+				"Main task" : "In an attempt to start a new company, worked with an associate on different applications, mostly C++ using DirectX and DirectShow. A fully working prototype has been developed involving computer vision (C++ and DDK)."
+			}
+		},
+		{
+			"filterValues":{
+				"from Year": "2001",
+				"to Year": "2003"
+			},
+			"Company": "INSA de Lyon",
+			"City": "Villeurbanne",
+			"Country": "France",
+			"Title": "Part-time assistant professor",
+			"Work accomplished": {
+				"Main task" : "Courses in hardware architecture and compilation, Research",
+				"Details": [
+					"Courses in hardware architecture using WindRiver VxWorks and in compilation.",
+					"Courses in compilation, using a two-level grammar compiler (STARLET).",
+					"Research on the subject “interoperability of urban models and data” for my thesis, using Knowledge management, Meta-data, Ontology and software orchestration."
+				]
+			}
+		},
+		{
+			"filterValues":{
+				"from Year": "1998",
+				"to Year": "2001"
+			},
+			"Company": "Université Lyon 1 and 2, INSA de Lyon",
+			"City": "Villeurbanne & Bourg en Bresse",
+			"Country": "France",
+			"Title": "Associate lecturer",
+			"Work accomplished": {
+				"Main task" : "Courses in computer sciences. Research for my thesis.",
+				"Details": [
+					"Courses in computer sciences: C++/Java/Perl and algorithmic, SQL, relational algebra, Oracle, Access, DBMS, Client/Server, Unix, Industrial engineering",
+					"Research for my thesis."
+				]
+			}
 		}
 	]
 }
