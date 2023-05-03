@@ -38,7 +38,7 @@
       <h3>Explanations</h3>
       <p>
         This rendered come from the idea of forcing to structure a document such as a Curriculum Vitae, and be able to get different view of it. 
-        I somehow started with the Voronoi view, which would need much more work for several obvious (how to use the partitioning in a clear way) and less obvious reasons (distributing the elements from a document on a plan can only be perfect for an even number of nodes...).
+        I somehow started with the Voronoi view, and so choose p5.js as the starting API, knowing Processing and its graphics and mathematics capabalities, and a powerful <a href=\"https://github.com/gorhill/Javascript-Voronoi\" target="_blank">Voronoi API</a>, which would need much more work for several obvious (how to use the partitioning in a clear way) and less obvious reasons (distributing the elements from a document on a plan can only be perfect for an even number of nodes...).
       </p>
       <p>
         The next objective was the filtered view.
@@ -65,6 +65,8 @@
           <li>The filtered view creates unique ids and classes for the JS tab code to work (adapted from the tab tutorial of W3C). As such, it is not possible to predefine CSS styles.</li>
           <li>As the keys of the JSON file are used to define IDs and classes in the filtered view, some allowed characters in JSON keys are not allowed in the HTML. Spaces are currently replaced, as initial numbers (replaced by their name, so 3 becomes "three" for instance), but some are missing, like ":" and "(" ")".</li>
           <li>And as the CSS styles are currently manually generated, there is a limit to the depth where they apply, currently 6. It could stupidly be generated in a big css static file with many levels, but the best would be to do it using the script. A refactoring is probably needed first.</li>
+          <li>p5.js helps with the manipulation of the DOM, but sometimes it makes things more confusing, as it might seems that you can write sequencially in a DIV, but you will actually not. So applying the \<ul\> before writing the content and the \</ul\> after will not work. The block will be empty and closed before the content. It seems that it is always needed to select the created element to write in it as children (as it would be with pure JS). As p5.js is not targeted to HTML manipulation, it is not the most documented aspect.
+          Thus it is possible that the hierarchy inside the generated DOM is still not correct.</li>
         </ul>
       </p>
       <h3>Original Json</h3>

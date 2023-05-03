@@ -55,6 +55,9 @@ function renderInHtmlNoFiltering(rootElement) {
 }
 
 function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
+	const current_element_txt = `${replaceFirstDigitByName(currentElement.key)}${currentDepth}${currentElement.nbInParsing}`;
+	const id_current_element = current_element_txt.replace(/\s+/g, '');
+
 	for (let iElements = 0; iElements < currentElement.elements.length; iElements++) {
 		child = currentElement.elements[iElements];
 
@@ -77,7 +80,9 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 			renderOnePartOfHtml(child, currentDepth + 1, divForContent);
 		}
 	}
-	usedDiv.html("<ul>", true);
+	usedDiv.html(`<ul class=\"rendered_depth${currentDepth}\" id=\"ul_rendered_depth${id_current_element}\">`, true);
+	const ulBlock = select(`#ul_rendered_depth${id_current_element}`);
+
 	for (let iElements = 0; iElements < currentElement.children.length; iElements++) {
 		child = currentElement.children[iElements];
 
@@ -88,7 +93,7 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 		//console.log("children " + child.content);
 		if (child.nbOfElements() + child.nbOfChildren() == 0) {
 			// A leaf :)
-			usedDiv.html(`<li>${child.content}</li>`, true);
+			ulBlock.html(`<li>${child.content}</li>`, true);
 		}
 		else {
 			if (child.key != "no_key") {
@@ -100,7 +105,6 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 			renderOnePartOfHtml(child, currentDepth + 1, divForContent);
 		}
 	}
-	usedDiv.html("</ul>", true);
 }
 
 function renderInHtmlWithFiltering(rootElement) {
@@ -159,7 +163,8 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 			}
 		}
 	}
-	usedDiv.html("<ul>", true);
+	usedDiv.html(`<ul class=\"filtered_depth${currentDepth}\" id=\"ul_filtered_depth${id_current_element}\">`, true);
+	const ulBlock = select(`#ul_filtered_depth${id_current_element}`);
 	for (let iElements = 0; iElements < currentElement.children.length; iElements++) {
 		child = currentElement.children[iElements];
 
@@ -170,7 +175,7 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 		//console.log("children " + child.content);
 		if (child.nbOfElements() + child.nbOfChildren() == 0) {
 			// A leaf :)
-			usedDiv.html(`<div class=\"filtered_subtabcontent_${currentDepth}\"><li>${child.content}</li><div/>`, true);
+			ulBlock.html(`<div class=\"filtered_subtabcontent_${currentDepth}\"><li>${child.content}</li><div/>`, true);
 		}
 		else {
 			if (child.key != "no_key") {
@@ -196,7 +201,6 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 			//usedDiv.html("</p>\n</div>", true);
 		}
 	}
-	usedDiv.html("</ul>", true);
 
 	if (firstButtonId != "None")
 	{
