@@ -64,6 +64,7 @@
           <li>The Voronoi graph is rather fragile: it is enough to have the wrong canvas size to break it. It is due to the distribution that might push 2 sites at the same place, which is not compatible with a Voronoi partition. So more work is needed on the distribution.</li>
           <li>The filtered view creates unique ids and classes for the JS tab code to work (adapted from the tab tutorial of W3C). As such, it is not possible to predefine CSS styles.</li>
           <li>As the keys of the JSON file are used to define IDs and classes in the filtered view, some allowed characters in JSON keys are not allowed in the HTML. Spaces are currently replaced, as initial numbers (replaced by their name, so 3 becomes "three" for instance), but some are missing, like ":" and "(" ")".</li>
+          <li>And as the CSS styles are currently manually generated, there is a limit to the depth where they apply, currently 6. It could stupidly be generated in a big css static file with many levels, but the best would be to do it using the script. A refactoring is probably needed first.</li>
         </ul>
       </p>
       <h3>Original Json</h3>

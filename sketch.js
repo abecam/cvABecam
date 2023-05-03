@@ -67,7 +67,7 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 			usedDiv.html(`${child.content}<br/>`, true);
 		}
 		else {
-			// Button, then content
+			// Title, then content
 			if (child.key != "no_key")	{
 				usedDiv.html(`<div class=\"rendered_subtabs_${currentDepth}\" id=\"${id_child_element}_rendered_subtabheader\"><p>${child.key}</p></div>`, true)
 			}
@@ -77,6 +77,7 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 			renderOnePartOfHtml(child, currentDepth + 1, divForContent);
 		}
 	}
+	usedDiv.html("<ul>", true);
 	for (let iElements = 0; iElements < currentElement.children.length; iElements++) {
 		child = currentElement.children[iElements];
 
@@ -87,7 +88,7 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 		//console.log("children " + child.content);
 		if (child.nbOfElements() + child.nbOfChildren() == 0) {
 			// A leaf :)
-			usedDiv.html(`${child.content}<br/>`, true);
+			usedDiv.html(`<li>${child.content}</li>`, true);
 		}
 		else {
 			if (child.key != "no_key") {
@@ -99,6 +100,7 @@ function renderOnePartOfHtml(currentElement, currentDepth, usedDiv) {
 			renderOnePartOfHtml(child, currentDepth + 1, divForContent);
 		}
 	}
+	usedDiv.html("</ul>", true);
 }
 
 function renderInHtmlWithFiltering(rootElement) {
@@ -115,11 +117,8 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 	const current_element_txt = `${replaceFirstDigitByName(currentElement.key)}${currentDepth}${currentElement.nbInParsing}`;
 	const id_current_element = current_element_txt.replace(/\s+/g, '');
 
-	usedDiv.html(`<div class=\"tab\" id=\"${id_current_element}_subbutton\">\n</div>`, true);
-	//usedDiv.html(`<div class=\"${id_current_element}_subtabcontent\" id=\"${id_current_element}_subtabcontent\">\n<p>`, true);
-	// Then find it to be able to use them
-	const divForButton = select(`#${id_current_element}_subbutton`, usedDiv);
-	divForButton.parent = usedDiv;
+	let divForButton; // The div will be created when there is the first button and so only if there is at least one. 
+
 	// Buttons
 	let isFirstButton = true;
 	let firstButtonId = "None";
@@ -134,11 +133,18 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 		//console.log("element " + child.content);
 		if (child.nbOfElements() + child.nbOfChildren() == 0) {
 			// A leaf :)
-			usedDiv.html(`${child.content}<br/>`, true);
+			usedDiv.html(`<div class=\"filtered_subtabcontent_${currentDepth}\">${child.content}<div/>`, true);
 		}
 		else {
 			// Button, then content
 			if (child.key != "no_key")	{
+				if (isFirstButton)
+				{
+					usedDiv.html(`<div class=\"tab filtered_subtab_${currentDepth}\" id=\"${id_current_element}_subbutton\">\n</div>`, true);
+					// Then find it to be able to use them
+					divForButton = select(`#${id_current_element}_subbutton`, usedDiv);
+					divForButton.parent = usedDiv;
+				}
 				divForButton.html(`<button class=\"${id_current_element}_subtablinks\" id=\"${id_child_element}_subtablinks\" onclick=\"openSubTabs(event, '${id_child_element}_subtabcontent', '${id_current_element}')\">${child.key}</button>`, true)
 				isButton = true;
 			}
@@ -153,6 +159,7 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 			}
 		}
 	}
+	usedDiv.html("<ul>", true);
 	for (let iElements = 0; iElements < currentElement.children.length; iElements++) {
 		child = currentElement.children[iElements];
 
@@ -163,10 +170,17 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 		//console.log("children " + child.content);
 		if (child.nbOfElements() + child.nbOfChildren() == 0) {
 			// A leaf :)
-			usedDiv.html(`${child.content}<br/>`, true);
+			usedDiv.html(`<div class=\"filtered_subtabcontent_${currentDepth}\"><li>${child.content}</li><div/>`, true);
 		}
 		else {
 			if (child.key != "no_key") {
+				if (isFirstButton)
+				{
+					usedDiv.html(`<div class=\"tab filtered_subtab_${currentDepth}\" id=\"${id_current_element}_subbutton\">\n</div>`, true);
+					// Then find it to be able to use them
+					divForButton = select(`#${id_current_element}_subbutton`, usedDiv);
+					divForButton.parent = usedDiv;
+				}
 				divForButton.html(`<button class=\"${id_current_element}_subtablinks\" id=\"${id_child_element}_subtablinks\" onclick=\"openSubTabs(event, '${id_child_element}_subtabcontent', '${id_current_element}')\">${child.key}</button>`, true)
 				isButton = true;
 			}
@@ -182,6 +196,7 @@ function renderOnePartOfHtmlWithFilter(currentElement, currentDepth, usedDiv) {
 			//usedDiv.html("</p>\n</div>", true);
 		}
 	}
+	usedDiv.html("</ul>", true);
 
 	if (firstButtonId != "None")
 	{
