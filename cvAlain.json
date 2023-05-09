@@ -79,7 +79,7 @@
 			},
 			{
 				"Name": "Platforms",
-				"Description": "Trello, Jira (Project Management), GitLab, Confluence, Mantis, Kayako"
+				"Description": "Trello, Jira (Project Management), GitLab, Confluence, Mantis, Kayako, CI/CD"
 			},
 			{
 				"Name": "Systems",
@@ -270,8 +270,23 @@
 			"Title": "Associate lecturer",
 			"Main task" : "Courses in computer sciences. Research for my thesis.",
 			"Details": [
-				"Courses in computer sciences: C++/Java/Perl and algorithmic, SQL, relational algebra, Oracle, Access, DBMS, Client/Server, Unix, Industrial engineering",
+				"Courses in computer sciences: C++/Java/Perl and algorithmic, SQL, relational algebra, Oracle, Access, DBMS, Client/Server, Unix, Industrial engineering.",
 				"Research for my thesis."
+			]
+		}
+	},
+	"Personal Experience": {
+		"From 2006" : {
+			"Company": "<a href=\"https:www.TheGiantBall.com\" target=”_blank” >www.TheGiantBall.com</a>",
+			"Title": "Independent developer",
+			"Main task" : "Continuous development of many prototypes and games as proof of concept, selt-teaching and as a way to continuously release end-products.",
+			"Details": [
+				"Development of several prototypes as proof-of-concept for convincing a Sport Watch company to add maps support on their watches. The most useful prototype is available on GitHub: <a href=\"https://github.com/abecam/MapsForAll\" target=”_blank” >MapsForAll</a>.\nThe project proposal got me a discussion with the product manager of the company but collaborating would only have been possible with a relocation to their country, which was not possible.\nThis prototype development learnt me how to develop on a Garmin watch and I developed several other applications and watchfaces, one being <a href=\"https://apps.garmin.com/en-US/apps/3fdc7678-2892-4214-9c9d-97f37fe64a15\" target=”_blank”>released</a>",
+				"Development of various small applications for Android in <a href=\"https://www.youtube.com/watch?v=spMxwwjLcUU\" target=”_blank”>3D</a> and stereoscopic 3D, using the Rajawali 3D API,  then a board game released only as a demo in C# with Unity3D.",
+				"Conception and development of a 2D game engine in Java used in 2 games played by more than 6000 persons online.",
+				"Android Developer Challenge: full conception of a geolocalised game, the Treasures Chests, and using web-services written with CakePHP using MySQL for building personnalised hunts. See the explanation here: <a href=\"https://www.youtube.com/watch?v=MLYwwj6ZUd4\" target=”_blank” >The Treasure Chests explanation</a>",
+				"Conception and development of various Applet games, including a multiplayer social experiment using a dedicated server using TCP connection and using the IP address to find the player country using IP ranges for countries (more details here: <a href=\"http://www.thegiantball.com/2020/07/the-giant-ball.html\" target=”_blank” >An history of the giant ball</a>). Together played by around 100.000 persons from 83 countries.",
+				"Conception and development of a physic based 3D game, in C++ using Ogre3D and the Newton physics API. Modified it to a <a href=\"https://www.thegiantball.com/2016/08/one-page-back-from-past.html\" target=”_blank” >tutorial example</a>, with the addition of multiplayer using TCP."
 			]
 		}
 	},
