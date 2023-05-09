@@ -20,43 +20,6 @@
 			"<a href=\"https://thefilter.shop/\" target=”_blank” >The Filter Shop</a>, a work-in-progress place to filter out non-ethical products and push ethical products to the front."
 		]
 	},
-	"Education": {
-		"Cursus": {
-			"1998 -2002" : {
-
-				"Institution": "Insa de Lyon",
-				"City": "Villeurbanne",
-				"Country": "France",
-				"Diploma": "PhD in Computer Science"
-			},
-			"1995 -1998" : {
-				"Institution": "Université de Bourgogne",
-				"City": "Dijon",
-				"Country": "France",
-				"Diploma": "MSc in Computer Sciences for the images"
-			},
-			"1993 -1995" : {
-				"Institution": "IUT Informatique de Dijon",
-				"City": "Dijon",
-				"Country": "France",
-				"Diploma": "Two-year technical University Degree in computer sciences (DUT)"
-			}
-	},
-		"Languages": {
-			"English": {
-				"level": "fluent"
-			},
-			"French": {
-				"level": "mother tongue"
-			},
-			"German": {
-				"level": "advanced beginner"
-			},
-			"Romanian": {
-				"level": "beginner"
-			}
-		}
-	},
 	"Main Skills": {
 		"Domain": "Computer Sciences",
 		"Speciality": "Software analysis and development",
@@ -134,9 +97,9 @@
 			"Title": "Research Assistant (Senior Software Engineer)",
 			"Main task" : "Software engineer/System administrator for the LiSyM Cancer project and HITS publications and Seek repositories",
 			"Details": [
-				"co-development in Ruby on Rails of Seek, a data management application mostly intended for Life Sciences (<a href=\"https://github.com/seek4science/seek\" target=”_blank” >Seek4Science</a>), including improving the OpenBis connector, Ruby&Java (<a href=\"https://github.com/FAIRdom/openseek-api-gem\" target=”_blank” >OpenSeek API Gem</a> & <a href=\"https://github.com/FAIRdom/openseek-api\" target=”_blank” >OpenSeek API</a>)",
-				"installation and administration of NextCloud, OpenBis, Authentik, Omero, administration of LiSyM Seek (<a href=\"https://seek.lisym.org/\" target=”_blank” >LiSyM Seek</a>) and co-administration of several other web applications using Docker and Docker-Compose, Linux Ubuntu Server. Full set-up of central identity, including the choice of Authentik, between Authentik and the other servers, through LDAP and OpenID.",
-				"Trainings and presentations around Seek and NextCloud: using the API, using the OpenBis connector.",
+				"Developed in Ruby on Rails on (<a href=\"https://github.com/seek4science/seek\" target=”_blank” >Seek</a>), a data management application mostly intended for Life Sciences, including improving the OpenBis connector, Ruby&Java (<a href=\"https://github.com/FAIRdom/openseek-api-gem\" target=”_blank” >OpenSeek API Gem</a> & <a href=\"https://github.com/FAIRdom/openseek-api\" target=”_blank” >OpenSeek API</a>)",
+				"Installed and administered NextCloud, OpenBis, Authentik, Omero, <a href=\"https://seek.lisym.org/\" target=”_blank” >LiSyM Seek</a> and co-administered several other web applications using Docker and Docker-Compose, Linux Ubuntu Server. Full set-up of central identity, including the choice of Authentik, between Authentik and the other servers, through LDAP and OpenID.",
+				"Gave trainings and presentations around Seek and NextCloud: using the API, using the OpenBis connector.",
 				"Other development for Seek and various utilities scripts in Python and Ruby."
 			]
 			
@@ -146,10 +109,10 @@
 			"City": "Heidelberg",
 			"Country": "Germany",
 			"Title": "Sole owner, mostly software developer",
-			"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
+			"Main task" : "Developed 4 games using Unity, in collaboration with a graphics artist",
 			"Details": [
 				"One is self-published on Steam: <a href=\"https://store.steampowered.com/app/1378660/NYAF/\" target=”_blank”>NYAF</a> - and Android, the 3 others were published on <a href=\"https://play.google.com/store/apps/developer?id=Alain+Becam\" target=”_blank” >Android</a>.",
-				"Improvements of my former Applets games and of a names generator started in 2017, published on <a href=\"https://tgbb.itch.io/\" target=”_blank” >Itch.io</a>, and all sources available on <a href=\"https://bitbucket.org/abecam/\" target=”_blank” >BitBucket</a>.",
+				"Improved my former Applets games and of a names generator started in 2017, published on <a href=\"https://tgbb.itch.io/\" target=”_blank” >Itch.io</a>, and all sources available on <a href=\"https://bitbucket.org/abecam/\" target=”_blank” >BitBucket</a>.",
 				"Started the development of a new monitoring service in Java to monitor Production environments, with the option of using metadata for finding anomalies. "
 			]
 		},
@@ -203,19 +166,6 @@
 						]
 					}
 			}
-		},
-		"From 2006" : {
-			"Company": "<a href=\"https:www.TheGiantBall.com\" target=”_blank” >www.TheGiantBall.com</a>",
-			"Title": "Independent developer",
-			"Main task" : "Development of 4 games using Unity, in collaboration with a graphics artist",
-			"Details": [
-				"Development of several prototypes as proof-of-concept for convincing a Sport Watch company to add maps support on their watches. The most useful prototype is available on GitHub: <a href=\"https://github.com/abecam/MapsForAll\" target=”_blank” >MapsForAll</a>.\nThe project proposal got me a discussion with the product manager of the company but collaborating would only have been possible with a relocation to their country, which was not possible.\nThis prototype development learnt me how to develop on a Garmin watch and I developed several other applications and watchfaces, one being <a href=\"https://apps.garmin.com/en-US/apps/3fdc7678-2892-4214-9c9d-97f37fe64a15\" target=”_blank”>released</a>",
-				"Development of various small applications for Android in <a href=\"https://www.youtube.com/watch?v=spMxwwjLcUU\" target=”_blank”>3D</a> and stereoscopic 3D, using the Rajawali 3D API,  then a board game released only as a demo in C# with Unity3D.",
-				"Conception and development of a 2D game engine in Java used in 2 games played by more than 6000 persons online.",
-				"Android Developer Challenge: full conception of a geolocalised game, the Treasures Chests, and using web-services written with CakePHP using MySQL for building personnalised hunts. See the explanation here: <a href=\"https://www.youtube.com/watch?v=MLYwwj6ZUd4\" target=”_blank” >The Treasure Chests explanation</a>",
-				"Conception and development of various Applet games, including a multiplayer social experiment using a dedicated server using TCP connection and using the IP address to find the player country using IP ranges for countries (more details here: <a href=\"http://www.thegiantball.com/2020/07/the-giant-ball.html\" target=”_blank” >An history of the giant ball</a>). Together played by around 100.000 persons from 83 countries.",
-				"Conception and development of a physic based 3D game, in C++ using Ogre3D and the Newton physics API. Modified it to a <a href=\"https://www.thegiantball.com/2016/08/one-page-back-from-past.html\" target=”_blank” >tutorial example</a>, with the addition of multiplayer using TCP."
-			]
 		},
 		"Sept 2004 - Feb 2008" : {
 			"Company": "University of Gotland",
@@ -288,6 +238,43 @@
 				"Conception and development of various Applet games, including a multiplayer social experiment using a dedicated server using TCP connection and using the IP address to find the player country using IP ranges for countries (more details here: <a href=\"http://www.thegiantball.com/2020/07/the-giant-ball.html\" target=”_blank” >An history of the giant ball</a>). Together played by around 100.000 persons from 83 countries.",
 				"Conception and development of a physic based 3D game, in C++ using Ogre3D and the Newton physics API. Modified it to a <a href=\"https://www.thegiantball.com/2016/08/one-page-back-from-past.html\" target=”_blank” >tutorial example</a>, with the addition of multiplayer using TCP."
 			]
+		}
+	},
+	"Education": {
+		"Cursus": {
+			"1998 -2002" : {
+
+				"Institution": "Insa de Lyon",
+				"City": "Villeurbanne",
+				"Country": "France",
+				"Diploma": "PhD in Computer Science"
+			},
+			"1995 -1998" : {
+				"Institution": "Université de Bourgogne",
+				"City": "Dijon",
+				"Country": "France",
+				"Diploma": "MSc in Computer Sciences for the images"
+			},
+			"1993 -1995" : {
+				"Institution": "IUT Informatique de Dijon",
+				"City": "Dijon",
+				"Country": "France",
+				"Diploma": "Two-year technical University Degree in computer sciences (DUT)"
+			}
+	},
+		"Languages": {
+			"English": {
+				"level": "fluent"
+			},
+			"French": {
+				"level": "mother tongue"
+			},
+			"German": {
+				"level": "advanced beginner"
+			},
+			"Romanian": {
+				"level": "beginner"
+			}
 		}
 	},
 	"Referees": {
