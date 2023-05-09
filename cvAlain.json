@@ -315,37 +315,51 @@
 			]
 		}
 	},
-	"Annex 2 - Supervisions": {
-		"2011-2019":
+	"Annex 2 - Supervisions": [
 		{
-			"Supervision": "Supervision and co-supervision of one to three students to help us for 6 months every year."
+			"2011-2019":
+			{
+				"Supervision": "Supervision and co-supervision of one to three students to help us for 6 months every year."
+			}
 		},
-		"2009":
 		{
-			"Supervision": "Supervision of three engineers to implement and integrate the new multi-user functionalities in the simulator software. Supervision of one bachelor student to finish the installation and configuration of a wiki and of a bug tracking system and the migration from CVS to SVN. Co-supervision of one student for its technical internship, to implement dynamics animations for pedestrians."
+			"2009":
+			{
+				"Supervision": "Supervision of three engineers to implement and integrate the new multi-user functionalities in the simulator software. Supervision of one bachelor student to finish the installation and configuration of a wiki and of a bug tracking system and the migration from CVS to SVN. Co-supervision of one student for its technical internship, to implement dynamics animations for pedestrians."
+			}
 		},
-		"2007":
 		{
-			"Supervision": "Supervision of two masters students to realize an innovative game in Java using JMonkey (<a href=\"http://houseofbubbles.blogspot.com/\" target=”_blank”>House of bubbles</a>), and my own distributed solution (<a href=\"http://code.google.com/p/hlm/\" target=”_blank”>High Level Manager</a>). Worked with the Leonardo office at TU Ilmenau and with the International Secretary at the University of Gotland to arrange their stay."
+			"2007":
+			{
+				"Supervision": "Supervision of two masters students to realize an innovative game in Java using JMonkey (<a href=\"http://houseofbubbles.blogspot.com/\" target=”_blank”>House of bubbles</a>), and my own distributed solution (<a href=\"http://code.google.com/p/hlm/\" target=”_blank”>High Level Manager</a>). Worked with the Leonardo office at TU Ilmenau and with the International Secretary at the University of Gotland to arrange their stay."
+			}
 		},
-		"2005 - Technical Lead for the MMRO package of the IPerG project":
 		{
-			"Supervision": [
-				"Supervision of a Master-level student for a six months internship to develop a chat and persistency support in the MMRO prototype for IPerG.",
-				"Supervision of 3 remote colleagues for the development of the mobile game part of the MMRO prototype. Their server was connected of the central client-server solution I wrote."
-			]
+			"2005 - Technical Lead for the MMRO package of the IPerG project":
+			{
+				"Supervision": [
+					"Supervision of a Master-level student for a six months internship to develop a chat and persistency support in the MMRO prototype for IPerG.",
+					"Supervision of 3 remote colleagues for the development of the mobile game part of the MMRO prototype. Their server was connected of the central client-server solution I wrote."
+				]
+			}
 		},
-		"2001-2002":
 		{
-			"Supervision": "Co-supervision of two Master-level students from the INSA of Lyon for their final thesis (equivalent to 4 months full-time). I mostly helped them technically with the mechanisms of information exchanges in distributed environments."
+			"2001-2002":
+			{
+				"Supervision": "Co-supervision of two Master-level students from the INSA of Lyon for their final thesis (equivalent to 4 months full-time). I mostly helped them technically with the mechanisms of information exchanges in distributed environments."
+			}
 		},
-		"2000-2001":
 		{
-			"Supervision": "Co-supervision of two Master-level students from the INSA of Lyon for their final thesis (equivalent to 4 months full-time). I helped them with the definition of meta-data and with the description of treatments using XML. Co-supervision of one student at Master-level, linked with my research, to investigate the possible continuity of my research work with a stronger focus on ontologies."
+			"2000-2001":
+			{
+				"Supervision": "Co-supervision of two Master-level students from the INSA of Lyon for their final thesis (equivalent to 4 months full-time). I helped them with the definition of meta-data and with the description of treatments using XML. Co-supervision of one student at Master-level, linked with my research, to investigate the possible continuity of my research work with a stronger focus on ontologies."
+			}
 		},
-		"2000":
 		{
-			"Supervision": "Supervision of one student for its technical internship (2 years after A-levels), 2 months in computer science: conception of a distributed component system, using Java RMI. This system allowed the abstraction of heterogeneous Java classes to link them."
+			"2000":
+			{
+				"Supervision": "Supervision of one student for its technical internship (2 years after A-levels), 2 months in computer science: conception of a distributed component system, using Java RMI. This system allowed the abstraction of heterogeneous Java classes to link them."
+			}
 		}
-	}
+	]
 }
