@@ -64,8 +64,7 @@
 	},
 	"Other Skills": [
 		{
-			"Name": "Organisational skills and competences",
-			"List": [
+			"Organisational skills and competences": [
 				{
 					"description": "Team supervision"
 				},
@@ -78,8 +77,7 @@
 			]
 		},
 		{
-			"Name": "Social skills and competences",
-			"List": [
+			"Social skills and competences": [
 				{
 					"description": "Diplomatic, open, sociable, sincere, dynamic, I take initiatives when needed."
 				},
