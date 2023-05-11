@@ -38,7 +38,7 @@
       <h3>Explanations</h3>
       <p>
         This rendered come from the idea of forcing to structure a document such as a Curriculum Vitae, and be able to get different view of it. 
-        I somehow started with the Voronoi view, and so choose p5.js as the starting API, knowing Processing and its graphics and mathematics capabalities, and a powerful <a href=\"https://github.com/gorhill/Javascript-Voronoi\" target="_blank">Voronoi API</a>, which would need much more work for several obvious (how to use the partitioning in a clear way) and less obvious reasons (distributing the elements from a document on a plan can only be perfect for an even number of nodes...).
+        I somehow started with the Voronoi view, and so choose p5.js as the starting API, knowing Processing and its graphics and mathematics capabalities, and a powerful <a href="https://github.com/gorhill/Javascript-Voronoi" target="_blank">Voronoi API</a>, which would need much more work for several obvious (how to use the partitioning in a clear way) and less obvious reasons (distributing the elements from a document on a plan can only be perfect for an even number of nodes...).
       </p>
       <p>
         The next objective was the filtered view.
@@ -61,7 +61,7 @@
       <p>
         Current bugs and limits
         <ul>
-          <li>The Voronoi graph is rather fragile: it is enough to have the wrong canvas size to break it. It is due to the distribution that might push 2 sites at the same place, which is not compatible with a Voronoi partition. So more work is needed on the distribution.</li>
+        <li>The Voronoi graph is rather fragile: it is enough to have the wrong canvas size to break it. It is due to the distribution that might push 2 sites in the wrong places (related to this <a href="https://github.com/gorhill/Javascript-Voronoi/issues/27" target="_blank">GitHub issue</a>?). So more work is needed on the distribution.</li>
           <li>The filtered view creates unique ids and classes for the JS tab code to work (adapted from the tab tutorial of W3C). As such, it is not possible to predefine CSS styles.</li>
           <li>As the keys of the JSON file are used to define IDs and classes in the filtered view, some allowed characters in JSON keys are not allowed in the HTML. Spaces are currently replaced, as initial numbers (replaced by their name, so 3 becomes "three" for instance), but some are missing, like ":" and "(" ")".</li>
           <li>And as the CSS styles are currently manually generated, there is a limit to the depth where they apply, currently 6. It could stupidly be generated in a big css static file with many levels, but the best would be to do it using the script. A refactoring is probably needed first.</li>
