@@ -37,11 +37,11 @@ function setup() {
 	endColor = color(64, 0);
 	toColor = color(255, 255, 255);
 
-	button = createButton('Voronoi edges');
+	button = createButton('Voronoi edges with treemap');
 	button.parent("voronoiCanvas");
 	button2 = createButton('Voronoi filled');
 	button2.parent("voronoiCanvas");
-	button3 = createButton('Tree view (giving the cell center of the Voronoi partition)');
+	button3 = createButton('Treemap (giving the cell center of the Voronoi partition)');
 	button3.parent("voronoiCanvas");
 	button.position(40, 95);
 	button.mousePressed(showVoronoiEdges);
@@ -726,6 +726,7 @@ function drawDiagram()
 		}
 		else if (currentView == typeOfViews.voronoi_edges)
 		{
+			drawAllElements();
 			drawVoronoi(pointsForVoronoi);
 		}
 	}
