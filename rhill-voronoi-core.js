@@ -121,7 +121,8 @@ Voronoi.prototype.reset = function() {
 
 Voronoi.prototype.sqrt = Math.sqrt;
 Voronoi.prototype.abs = Math.abs;
-Voronoi.prototype.ε = Voronoi.ε = 1e-9;
+//Voronoi.prototype.ε = Voronoi.ε = 1e-9;
+Voronoi.prototype.ε = Voronoi.ε = 1e-7;//no crash
 Voronoi.prototype.invε = Voronoi.invε = 1.0 / Voronoi.ε;
 Voronoi.prototype.equalWithEpsilon = function(a,b){return this.abs(a-b)<1e-9;};
 Voronoi.prototype.greaterThanWithEpsilon = function(a,b){return a-b>1e-9;};

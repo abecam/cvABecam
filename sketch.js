@@ -19,6 +19,15 @@ let jsonFound;
 let diagram;
 let ratio;
 
+const typeOfViews =
+{
+	voronoi_edges: 'voronoi_edges',
+	voronoi_filled: 'voronoi_filled',
+	tree_view: 'tree_view'
+};
+
+let currentView = typeOfViews.voronoi_edges;
+
 function setup() {
 	font = loadFont('assets/SourceSansPro-Regular.otf');
 
@@ -27,6 +36,21 @@ function setup() {
 	voronoiCanvas.parent("voronoiCanvas");
 	endColor = color(64, 0);
 	toColor = color(255, 255, 255);
+
+	button = createButton('Voronoi edges');
+	button.parent("voronoiCanvas");
+	button2 = createButton('Voronoi filled');
+	button2.parent("voronoiCanvas");
+	button3 = createButton('Tree view (giving the cell center of the Voronoi partition)');
+	button3.parent("voronoiCanvas");
+	button.position(40, 95);
+	button.mousePressed(showVoronoiEdges);
+
+	button2.position(button.x + button.width, 95);
+	button2.mousePressed(showVoronoiFilled);
+
+	button3.position(button2.x + button2.width, 95);
+	button3.mousePressed(showTreeView);
 
 	// Set text characteristics
 	textFont(font);
@@ -37,6 +61,24 @@ function setup() {
 	ratio = windowWidth/windowHeight;
 	rootElement = new Element(20, 20, windowWidth - 20, windowHeight - 20, xCenter, yCenter, 0, 1, nbOfObjectBrowsed, "Root", "Root", -1)
 	fetchJson(jsonPath);
+}
+
+function showVoronoiEdges()
+{
+	currentView = typeOfViews.voronoi_edges;
+	drawDiagram();
+}
+
+function showVoronoiFilled()
+{
+	currentView = typeOfViews.voronoi_filled;
+	drawDiagram();
+}
+
+function showTreeView()
+{
+	currentView = typeOfViews.tree_view;
+	drawDiagram();
 }
 
 function windowResized() {
@@ -538,6 +580,62 @@ function drawElements(currentElement, currentDepth) {
 	}
 }
 
+function drawVoronoiFilled(sites)
+{
+	var voronoi = new Voronoi();
+	var bbox = { xl: 20, xr: windowWidth - 20, yt: 20, yb: windowHeight - 20 }; 
+
+	diagram = voronoi.compute(sites, bbox);
+
+	var cells = diagram.cells,
+			iCell = cells.length,
+			cell,
+			halfedges, nHalfedges, iHalfedge, v,
+			showGrout = true,
+			showSites = true,
+			mustFill = true;
+	while (iCell--) {
+		cell = cells[iCell];
+		halfedges = cell.halfedges;
+		nHalfedges = halfedges.length;
+		if (nHalfedges) {
+			if (showGrout || mustFill) {
+				v = halfedges[0].getStartpoint();
+				beginShape();
+				//ctx.moveTo(v.x,v.y);
+				push();
+				stroke(color(0,0,0));
+				fill(color(50+random(205),50+random(205),40+random(205)));
+				const startx = v.x;
+				const starty = v.y;
+				translate(v.x,v.y);
+				for (iHalfedge=0; iHalfedge<nHalfedges; iHalfedge++) {
+					v = halfedges[iHalfedge].getEndpoint();
+					//ctx.lineTo(v.x,v.y);
+					vertex(v.x-startx,v.y-starty);
+					}
+				endShape(CLOSE);
+				if (mustFill) {
+					//ctx.fillStyle = cell.site.color.rgbToHex();
+					//ctx.fill();
+					}
+				if (showGrout) {
+					//ctx.stroke();
+					}
+				}
+				pop();
+				if (showSites) {
+					//ctx.fillStyle = 'black';
+					//ctx.fillRect(cell.site.x-0.5,cell.site.y-0.5,1.5,1.5);
+					push();
+					stroke(0, 0, 0);
+					noFill();
+					rect(1 + cell.site.x-0.5,cell.site.y-0.5,1.5,1.5);
+					pop();
+				}
+			}
+		}
+}
 function drawVoronoi(sites) {
 	var voronoi = new Voronoi();
 	var bbox = { xl: 20, xr: windowWidth - 20, yt: 20, yb: windowHeight - 20 }; // xl is x-left, xr is x-right, yt is y-top, and yb is y-bottom
@@ -618,8 +716,18 @@ function mousePressed() {
 function drawDiagram()
 {
 	if (cvInitialized) {
-		drawAllElements();
-		drawVoronoi(pointsForVoronoi);
+		if (currentView == typeOfViews.tree_view)
+		{
+			drawAllElements();
+		}
+		else if (currentView == typeOfViews.voronoi_filled)
+		{
+			drawVoronoiFilled(pointsForVoronoi);
+		}
+		else if (currentView == typeOfViews.voronoi_edges)
+		{
+			drawVoronoi(pointsForVoronoi);
+		}
 	}
 }
 
