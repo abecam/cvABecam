@@ -580,20 +580,13 @@ function drawElements(currentElement, currentDepth) {
 	}
 }
 
-function drawVoronoiFilled(sites)
-{
+function drawVoronoiFilled(sites) {
 	var voronoi = new Voronoi();
-	var bbox = { xl: 20, xr: windowWidth - 20, yt: 20, yb: windowHeight - 20 }; 
+	var bbox = { xl: 20, xr: windowWidth - 20, yt: 20, yb: windowHeight - 20 };
 
 	diagram = voronoi.compute(sites, bbox);
 
-	var cells = diagram.cells,
-			iCell = cells.length,
-			cell,
-			halfedges, nHalfedges, iHalfedge, v,
-			showGrout = true,
-			showSites = true,
-			mustFill = true;
+	var cells = diagram.cells, iCell = cells.length, cell, halfedges, nHalfedges, iHalfedge, v, showGrout = true, showSites = true, mustFill = true;
 	while (iCell--) {
 		cell = cells[iCell];
 		halfedges = cell.halfedges;
@@ -604,37 +597,37 @@ function drawVoronoiFilled(sites)
 				beginShape();
 				//ctx.moveTo(v.x,v.y);
 				push();
-				stroke(color(0,0,0));
-				fill(color(50+random(205),50+random(205),40+random(205)));
+				stroke(color(0, 0, 0));
+				fill(color(50 + random(205), 50 + random(205), 40 + random(205)));
 				const startx = v.x;
 				const starty = v.y;
-				translate(v.x,v.y);
-				for (iHalfedge=0; iHalfedge<nHalfedges; iHalfedge++) {
+				translate(v.x, v.y);
+				for (iHalfedge = 0; iHalfedge < nHalfedges; iHalfedge++) {
 					v = halfedges[iHalfedge].getEndpoint();
 					//ctx.lineTo(v.x,v.y);
-					vertex(v.x-startx,v.y-starty);
-					}
+					vertex(v.x - startx, v.y - starty);
+				}
 				endShape(CLOSE);
 				if (mustFill) {
 					//ctx.fillStyle = cell.site.color.rgbToHex();
 					//ctx.fill();
-					}
+				}
 				if (showGrout) {
 					//ctx.stroke();
-					}
-				}
-				pop();
-				if (showSites) {
-					//ctx.fillStyle = 'black';
-					//ctx.fillRect(cell.site.x-0.5,cell.site.y-0.5,1.5,1.5);
-					push();
-					stroke(0, 0, 0);
-					noFill();
-					rect(1 + cell.site.x-0.5,cell.site.y-0.5,1.5,1.5);
-					pop();
 				}
 			}
+			pop();
+			if (showSites) {
+				//ctx.fillStyle = 'black';
+				//ctx.fillRect(cell.site.x-0.5,cell.site.y-0.5,1.5,1.5);
+				push();
+				stroke(0, 0, 0);
+				noFill();
+				rect(1 + cell.site.x - 0.5, cell.site.y - 0.5, 1.5, 1.5);
+				pop();
+			}
 		}
+	}
 }
 function drawVoronoi(sites) {
 	var voronoi = new Voronoi();
@@ -716,16 +709,13 @@ function mousePressed() {
 function drawDiagram()
 {
 	if (cvInitialized) {
-		if (currentView == typeOfViews.tree_view)
-		{
+		if (currentView == typeOfViews.tree_view) {
 			drawAllElements();
 		}
-		else if (currentView == typeOfViews.voronoi_filled)
-		{
+		else if (currentView == typeOfViews.voronoi_filled) {
 			drawVoronoiFilled(pointsForVoronoi);
 		}
-		else if (currentView == typeOfViews.voronoi_edges)
-		{
+		else if (currentView == typeOfViews.voronoi_edges) {
 			drawAllElements();
 			drawVoronoi(pointsForVoronoi);
 		}

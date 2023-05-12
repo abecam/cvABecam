@@ -122,7 +122,7 @@ Voronoi.prototype.reset = function() {
 Voronoi.prototype.sqrt = Math.sqrt;
 Voronoi.prototype.abs = Math.abs;
 //Voronoi.prototype.ε = Voronoi.ε = 1e-9;
-Voronoi.prototype.ε = Voronoi.ε = 1e-7;//no crash
+ε=Voronoi.prototype.ε = Voronoi.ε = 1e-9;//no crash
 Voronoi.prototype.invε = Voronoi.invε = 1.0 / Voronoi.ε;
 Voronoi.prototype.equalWithEpsilon = function(a,b){return this.abs(a-b)<1e-9;};
 Voronoi.prototype.greaterThanWithEpsilon = function(a,b){return a-b>1e-9;};
@@ -561,8 +561,8 @@ Voronoi.prototype.Cell.prototype.pointIntersection = function(x, y) {
 //
 
 Voronoi.prototype.Vertex = function(x, y) {
-    this.x = x;
-    this.y = y;
+    this.x = Math.max(Math.min(x, 1/ε), -1/ε);
+    this.y = Math.max(Math.min(y, 1/ε), -1/ε);
     };
 
 Voronoi.prototype.Edge = function(lSite, rSite) {
@@ -1643,7 +1643,15 @@ Voronoi.prototype.compute = function(sites, bbox) {
         }
 
     // Initialize site event queue
-    var siteEvents = sites.slice(0);
+    //var siteEvents = sites.slice(0);
+    
+    //var ε = this.EPSILON;
+    var siteEvents = sites.map(function(site) {
+    site.x = Math.floor(site.x / ε) * ε;
+    site.y = Math.floor(site.y / ε) * ε;
+    return site;
+    });
+    
     siteEvents.sort(function(a,b){
         var r = b.y - a.y;
         if (r) {return r;}
