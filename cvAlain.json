@@ -93,10 +93,11 @@
 			"City": "Heidelberg",
 			"Country": "Germany",
 			"Title": "C#/Javascript/Python Software Developer",
-			"Main task" : "Software engineer/System administrator for the LiSyM Cancer project and HITS publications and Seek repositories",
+			"Main task" : "Development of a web-application in Django to support Ethical Practices.",
 			"Details": [
-				"Developing a platform to encourage ethical practices for shops, studios and publishers, <a href=\"https://www.thefilter.shop/\" target=”_blank” >the FilterShop</a>, with the CMS fully opensource and on <a href=\"https://github.com/abecam/thefiltershop\" target=”_blank” >GitHub</a>.",
-				"Working on a free <a href=\"https://twitter.com/abecam22/status/1642254356069199873\" target=”_blank” >update</a> for my Unity game on Steam."
+				"Developing a platform to encourage Ethical Practices for shops, studios and publishers, <a href=\"https://www.thefilter.shop/\" target=”_blank” >the FilterShop</a>, with the CMS fully opensource and on <a href=\"https://github.com/abecam/thefiltershop\" target=”_blank” >GitHub</a>.",
+				"Working on a free <a href=\"https://twitter.com/abecam22/status/1642254356069199873\" target=”_blank” >update</a> for my Unity game on Steam.",
+				"Developed this JSON visualizer currently used to display my online CV, javascript using P5.js for the Voronoi display from a Tree map partition"
 			]
 			
 		},
