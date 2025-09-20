@@ -16,51 +16,72 @@
 		},
 		"Web Pages": [
 			"<a href=\"https://www.thegiantball.com/\" target=”_blank” >TheGiantBall Blog</a>, description of various projects and some privacy policies (mostly) for the Android Games.",
-			"<a href=\"https://www.ethical-game.org/\" target=”_blank” >Ethical Game</a>, instructions for parents and developers about ethical and non-ethical practices in video games",
-			"<a href=\"https://thefilter.shop/\" target=”_blank” >The Filter Shop</a>, a work-in-progress place to filter out non-ethical products and push ethical products to the front."
+			"<a href=\"https://www.ethical-game.org/\" target=”_blank” >Ethical Game</a>, instructions for parents and developers about ethical and non-ethical practices in video games"
 		]
 	},
 	"Main Skills": {
 		"Domain": "Computer Sciences",
-		"Speciality": "Software analysis and development",
-		"Skills": [
-			{
-				"Name": "Computer languages",
-				"Description": "proficient in Java, advanced in Ruby, C# and C, intermediate in Python, C++ (rusty, was proficient, as with C), Javascript and PHP."
-			},
-			{
-				"Name": "Web-development",
-				"Description": "Ruby on Rails, Vaadin framework, Servlets, SSO implementation"
-			},
-			{
-				"Name": "Databases",
-				"Description": "SQL, relational algebra, DBMS, MySQL, Oracle, PostGres"
-			},
-			{
-				"Name": "Networks",
-				"Description": "client-server, distributed objects and architectures (use and conception), protocols (HTTPD, UDP, TCP, SMTP, familiar with RFCs), and software stacks (theoretical OSI model, TCP/IP)"
-			},
-			{
-				"Name": "Platforms",
-				"Description": "Trello, Jira (Project Management), GitLab, Confluence, Mantis, Kayako, CI/CD"
-			},
-			{
-				"Name": "Systems",
-				"Description": "Desktop and shells usage of Windows (all versions), UNIX (Linux, past usage of Solaris and others) and macOS"
-			},
-			{
-				"Name": "Mobiles applications",
-				"Description": "wrote several applications on Android (0.9 until now)"
-			},
-			{
-				"Name": "Artificial intelligence",
-				"Description": "advanced in knowledge management: ontology, logic, knowledge representation, management of documents (datamining), good knowledge of treatment of signal and of images, knowledge of Machine Learning."
-			},
-			{
-				"Name": "Computers hardware",
-				"Description": "functioning and use, teaching of Hardware architecture with application within WindRiver VxWorks."
-			}
-		]
+		"Specialities": [
+			"Software analysis and development", 
+			"Platforms integration (from bare-metal to cloud)",
+			"Data Management"
+		],
+		"Skills": {
+			"Computer languages": [
+				"proficient in Java",
+				"advanced in Ruby, Python, C# and C",
+				"intermediate in C++ (rusty, was proficient, as with C), Javascript and PHP."
+			],
+			"Web-development": [
+				"Ruby on Rails", "Vaadin framework", "Servlets", "SSO implementation"
+			],
+			"Databases": [
+				"SQL", "relational algebra", "DBMS", "MySQL", "Oracle", "PostGres"
+			],
+			"Dev-Ops": [
+				"Docker, Docker Compose",
+				"Kubernetes usage",
+				"CI/CD",
+				"Knowledge of OpenStack",
+				"Knowledge of Puppet, Ansible and Terraform",
+				"Central Identity Management (OAuth, OpenID, Authentik)"
+			],
+			"Data-Management": [
+				"FAIR Principle",
+				"Data Management Plans",
+				"Set-up from Bare-Metal to Kubernetes",
+				"Planning and setup of Assemblies",
+				"API development and usage",
+				"Meta-data, taxonomies and ontologies"
+			],
+			"Networks": [
+				"client-server", "distributed objects and architectures (use and conception)",
+				"protocols (HTTPD, UDP, TCP, SMTP, familiar with RFCs)",
+				"software stacks (theoretical OSI model, TCP/IP)"
+			],
+			"Platforms": [
+				"Trello",
+				"Jira (Project Management)", 
+				"GitLab",
+				"Confluence", "Mantis", "Kayako"
+			],
+			"Systems": [
+				"Desktop and shells usage of Windows (all versions)", 
+				"UNIX (Linux, past usage of Solaris and others)",
+				"macOS"
+			],
+			"Mobiles applications": [ "wrote several applications on Android (0.9 until now)" ],
+			"Artificial intelligence": [
+				"advanced in knowledge management: ontology, logic, knowledge representation", 
+				"management of documents (datamining)",
+				"good knowledge of treatment of signal and of images", 
+				"knowledge of Machine Learning."
+			],
+			"Computers hardware": [
+				"functioning and use",
+				"teaching of Hardware architecture with application within WindRiver VxWorks."
+			]
+		}
 	},
 	"Other Skills": [
 		{
@@ -89,6 +110,21 @@
 	],
 	"Work Experience": {
 		"Mar 2023 - Now" : {
+			"Company": "University Heidelberg - Bioquant - Kummer Group",
+			"City": "Heidelberg",
+			"Country": "Germany",
+			"Title": "PostDoc (Data Management Technical Specialist)",
+			"Main task" : "Responsible for the Work Package DataManagement on the Cloud for the <a href=\"https://datenkompetenz.cloud/\" target=”_blank” >DeKCD project</a>",
+			"Details": [
+				"Organised the Work Package, setting-up regular meeting within the project and with external partners",
+				"Created a repository of cross-domain Data Management Platforms with an emphasis on the FAIR principle and their affinity to the cloud, hosted on GitHub and using Quadro with GitHub publish actions (<a href=\"https://dekcd.github.io/FAIR-DMP-Registry/\" target=”_blank” >Repository of data-management platforms</a>, presented in the workshop <a href=\"https://docs.google.com/presentation/d/1OypxCzZl3Wfj-WwlrE1jfCmb7IRvLp6v8uEusIph5Gw/edit?usp=sharing\" target=”_blank” >\"Cloud meets RDM: Unlocking Research Data Management in the Cloud \"</a>",
+				"Working on a comprehensive  <a href=\"https://dekcd.github.io/DeKCD-DMOnTheCloud/\" target=”_blank” >Quick-Start</a> on setting-up and adapting Data Management Platforms from Bare-Metal to full cloud (Kubernetes with S3 storage and central identity server) using the Seek DataManagement platform as initial example",
+				"Gave trainings and presentations: presenting the repository, using the repository, overview on the work-in-progress on adapting a Data Management Platform for the Cloud",
+				"Participation in other Work Packages"
+			]
+			
+		},
+		"Mar 2023 - Mar 2024" : {
 			"Company": "Independent",
 			"City": "Heidelberg",
 			"Country": "Germany",
